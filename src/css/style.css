@@ -1,0 +1,48 @@
+.about {
+  background-color: aquamarine;
+  margin-bottom: 2rem;
+  height: 100vh;
+  width: 80vw; }
+
+.header {
+  background-color: green;
+  margin: 4rem;
+  height: 10vh;
+  width: 80vw; }
+
+.projects {
+  background-color: purple;
+  color: pink;
+  margin-bottom: 3rem;
+  height: 100vh;
+  width: 80vw; }
+
+.weather {
+  background-color: yellow;
+  margin-bottom: 3rem;
+  height: 80vh;
+  width: 80vw; }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 62.5%;
+  line-height: 1.7; }
+
+body {
+  font-size: 2rem;
+  height: 50vh;
+  width: 50vw; }
+
+.overall {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95vw; }
