@@ -7,7 +7,7 @@ import Current from './components/Current';
 
 
 ReactDOM.render(
-    <Current />, document.querySelector('.weather')
+    <Current />, document.querySelector('#weather')
 );
   
     

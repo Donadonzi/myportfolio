@@ -5,7 +5,7 @@
   width: 80vw; }
 
 .header {
-  background-color: green;
+  background-color: #29f729;
   margin: 4rem;
   height: 10vh;
   width: 80vw; }
@@ -18,28 +18,35 @@
   width: 80vw; }
 
 .weather {
-  font-size: 3rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
   margin-bottom: 3rem;
-  height: 80vh;
+  height: 60vh;
   width: 80vw;
-  position: relative; }
-  .weather__text::first-letter {
-    text-transform: capitalize; }
+  background-color: darkgray;
+  color: darkblue;
+  border-radius: 7px;
+  overflow: hidden; }
   .weather__text {
-    position: absolute;
-    top: 10%;
-    left: 10%;
-    display: block;
-    color: red;
-    z-index: 10; }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    text-align: center;
+    height: 80%;
+    background-color: #808080;
+    border-radius: 7px; }
+    .weather__text img {
+      height: 10rem;
+      width: 10rem;
+      margin-left: 30%; }
 
 .bg-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
   width: 100%;
-  overflow: hidden; }
+  height: 100%; }
   .bg-video__content {
     height: 100%;
     width: 100%;

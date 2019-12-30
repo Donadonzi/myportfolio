@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import axios from 'axios';
 import VideoSelector from './VideoSelector';
 
@@ -11,74 +10,86 @@ class Current extends React.Component {
         apiKey: 'b0aa8c11a2cbe1989f85e8149167e9a1',
         lat: 0,
         lon: 0,
-        time: '',
-        code: 0,
-        msg: ''
-        }
-
+        code: null,
+        msg1: '',
+        msg2: '',
+        iconUrl: ''
+        };
+    
     componentDidMount()   {
-        window.navigator.geolocation.getCurrentPosition(res => {
-            this.setState({lat: String(res.coords.latitude)}); 
-            this.setState({lon: String(res.coords.longitude)});
-            this.getWeather(this.state.lat, this.state.lon, this.state.apiKey);
-        });
-        this.DayOrNight();
+        window.navigator.geolocation.getCurrentPosition(
+            geoLocation => {
+                const coords = {
+                    latitude: geoLocation.coords.latitude,
+                    longitude: geoLocation.coords.longitude
+                };
+                this.getWeather(coords, this.state.apiKey);
+            },
+            error => {
+                const coords = {
+                    latitude: 43.6548,
+                    longitude: -79.3883
+                }
+                this.getWeather(coords, this.state.apiKey);
+            }
+        );        
     };
         
-    getWeather = async(lat, lon, apiKey) => {
+    getWeather = async(coords, apiKey) => {
+        try {
+            const response = await axios.get(
+                `http://api.openweathermap.org/data/2.5/weather?` +
+                    `lat=${coords.latitude}&` +
+                    `lon=${coords.longitude}&` +
+                    `units=metric&` +
+                    `appid=${apiKey}`
+            );
 
-        const response = await axios(`
-            http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`);
+            console.log('Received weather API response');
+            console.log(response);
 
-        this.setState({msg: `${response.data.weather[0].description} in
-            ${response.data.name}. It's currently ${Math.ceil(response.data.main.temp)} degrees,
-            feels like ${Math.ceil(response.data.main.feels_like)}`});
-
-        this.setState({code: parseInt(response.data.weather[0].id)});
-
-        console.log(response);
-    };
-
-    DayOrNight() {
-        const hours = new Date().getHours();
-        console.log(hours);
-        if (hours >= 6 && hours <= 17) {
-            this.setState({time: 'day'});
-        } else {
-            this.setState({time: 'night'});
+            this.setState({
+                code: response.data.weather[0].id,
+                msg1: `${this.capitalizeFirstLetter(response.data.weather[0].description)} in ${response.data.name}.`,
+                msg2: `It's currently ${Math.ceil(response.data.main.temp)} degrees,
+                    feels like ${Math.ceil(response.data.main.feels_like)}`,
+                iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png` 
+            });
+        } catch (err) {
+            alert(err);
         }
+        
+    };
+    
+    capitalizeFirstLetter(string) {
+        return string.charAt(0).toUpperCase() + string.slice(1);
     };
 
-    renderText(){
-        return (
-            <div>
-               <div>{this.state.msg}</div>
-               <div>{this.state.time}</div>
-               <div>{this.state.code}</div>
-           </div>
-        );
-    }
+    componentDidUpdate()  {
+        console.log(`Current update with code=${this.state.code}`);
 
-    render() {
-                
-       return (
-        <div>
-            <p class="weather__text">
-                {this.renderText()}
-            </p>
-            <VideoSelector time={this.state.time} code={this.state.code} />
-        </div>   
+        // this.renderVideo();
         
-       );
+        // console.log(this.state.lat);
+        // console.log(this.state.lon);
         
+    }; 
+
+    render() { 
+        return (
+            <div className="weather">
+                <p className="weather__text">
+                    {this.state.msg1}<br />{this.state.msg2}
+                    <img src={this.state.iconUrl} alt="Icon" />
+                </p>
+                <VideoSelector code={this.state.code} />
+            </div>
+        );
     }
 }
 
 
 export default Current;
-// ReactDOM.render(
-//     <Current />, document.querySelector('.weather')
-// );
 
 
 
