@@ -21,8 +21,7 @@ html {
 body {
     // padding: 3rem;
     font-size: 2rem;
-    height: 50vh;
-    width: 50vw;
+    
 }
 
 .overall {
@@ -30,9 +29,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 95vw;
+    width: 100%;
 }
 
-.main-container {
-   
-}
+// .main-container {
+//    width: 100%;
+// }
