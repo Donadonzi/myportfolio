@@ -121,93 +121,67 @@
   .bg-video__content {
     object-fit: cover; }
 
-#main {
+.projects__gallery {
+  background-color: #575757;
+  height: 80vh;
   position: relative;
-  margin-bottom: 70px; }
+  transition: all .8s;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
 
-#carousel {
-  margin-top: 200px;
+.projects__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
-  height: 60px;
-  background-color: #111;
-  box-shadow: 0 3px 5px #111;
   /* Initially hidden */
-  opacity: 0;
-  /* Will animate the transition */
-  -moz-transition: 0.4s opacity;
-  -webkit-transition: 0.4s opacity;
-  transition: 0.4s opacity; }
+  opacity: 0; }
+
+.projects__list__item {
+  display: none;
+  list-style: none;
+  width: 400px;
+  height: 100px;
+  transition: 0.4s all; }
 
 #carousel.active {
   opacity: 1; }
 
-#carousel li {
-  display: none;
-  list-style: none;
-  width: 150px;
-  height: 150px;
-  margin: -82px 18px 0;
-  position: relative;
-  -moz-transition: 0.4s all;
-  -webkit-transition: 0.4s all;
-  transition: 0.4s all; }
-
 #carousel li.visible {
-  display: inline-block; }
+  display: block; }
 
-#carousel li a img {
-  border: none; }
-
-#carousel li img {
-  display: block;
-  width: auto;
+.projects__list__photo {
+  border: none;
+  width: 40rem;
   height: auto;
-  max-width: 100%;
-  max-height: 100%;
-  position: relative;
-  z-index: 10; }
+  display: block;
+  max-width: 100%; }
 
 /* Creating the cradle below the thumbnails.
 	Uses % so that it grows with the image. */
-#carousel li:after {
-  content: '';
-  background: url("../img/cradle.png") no-repeat top center;
-  background-size: contain;
-  bottom: 4%;
-  content: "";
-  height: 50px;
-  left: -6.5%;
-  position: absolute;
-  right: -6.5%;
-  width: auto;
-  z-index: 1; }
-
-#carousel li:hover {
-  height: 197px;
-  margin-top: -152px;
-  width: 222px; }
+.projects__list__item:hover {
+  margin-top: -10rem;
+  transform: scale(1.5); }
 
 .arrow {
   background: url("../img/arrows.png") no-repeat;
-  width: 28px;
-  height: 28px;
-  opacity: 0.8;
+  width: 5rem;
+  height: 5rem;
+  opacity: .7;
   text-indent: -999px;
   overflow: hidden;
   cursor: pointer;
-  display: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-left: -428px;
-  margin-top: 25px; }
+  display: block; }
 
 .arrow:hover {
   opacity: 1; }
 
 .arrow.next {
-  margin-left: 400px;
   background-position: top right; }
+
+.arrow.prev {
+  display: none; }
 
 *,
 *::after,
@@ -234,7 +208,6 @@ body {
   width: 90vw; }
 
 .test {
-  background-color: #fdd76d;
   height: 90vh;
   margin: 4rem;
   width: 100%; }

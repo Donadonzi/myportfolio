@@ -23,7 +23,7 @@ ReactDOM.render(
 			carousel: '#carousel',
 			nextButton: '.arrow.next',
 			prevButton: '.arrow.prev',
-			shuffle: true
+			shuffle: false
 		});
 		
 		navigator.init();		
