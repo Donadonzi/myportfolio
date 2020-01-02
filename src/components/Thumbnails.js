@@ -1,18 +1,3 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './css/style.css';
-import Current from './components/Current';
-
-
-
-
-
-ReactDOM.render(
-    <Current />, document.querySelector('#weather')
-);
-
-
-// =============== JQUERY CODE FOR THUMBNAILS =================//
 (function($){ 
 		
 	// Main code
@@ -176,11 +161,5 @@ ReactDOM.render(
 		};
 
 	}
-
-// eslint-disable-next-line no-undef
+	
 })(jQuery);
-  
-    
-
-
- 

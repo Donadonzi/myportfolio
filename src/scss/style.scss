@@ -2,6 +2,7 @@
 @import "header";
 @import "projects";
 @import "weather";
+@import "thumbnails";
 
 *,
 *::after,
@@ -21,17 +22,27 @@ html {
 body {
     // padding: 3rem;
     font-size: 2rem;
+    width: 95vw;
+    padding: 4rem;
     
 }
 
 .overall {
-    // padding: 3rem;
+    
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 100%;
+    // align-items: center;
+    justify-content: center;
+    
+    width: 90vw;
 }
 
-// .main-container {
-//    width: 100%;
-// }
+.test {
+    background-color: #fdd76d;
+    height: 90vh;
+    margin: 4rem;
+    width: 100%;
+
+}
+
+

@@ -1,21 +1,20 @@
 .about {
   background-color: aquamarine;
-  margin-bottom: 2rem;
   height: 100vh;
-  width: 80vw; }
+  width: 100%; }
 
 .header {
-  background-color: #29f729;
-  margin: 4rem;
+  background-color: #8df58d;
+  margin-bottom: 4rem;
   height: 10vh;
-  width: 80vw; }
+  width: 100%; }
 
 .projects {
-  background-color: #daaeda;
-  color: pink;
-  margin-bottom: 3rem;
+  background-color: #dad8d8;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
   height: 100vh;
-  width: 90vw;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 2rem;
@@ -50,22 +49,28 @@
   .project__card:hover .project__card__side--back {
     transform: rotateY(0deg); }
   .project__card--front-1 {
-    background-color: orange;
-    grid-column: 1 / span 1; }
+    background-image: linear-gradient(#e67e22, #555);
+    grid-column: 1 / span 1;
+    /* ========= COLORS ==========
+        Main Orange Color: #e67e22
+        background-color: #fff;
+        color: #555;
+        background-color: #cf6d17;
+        background-color: #f4f4f4; */ }
   .project__card--front-2 {
-    background-color: #f8f870;
+    background-image: linear-gradient(#7ed56f, #156147);
     grid-column: 2 / span 1; }
   .project__card--front-3 {
-    background-color: #fc8a56;
+    background-image: linear-gradient(#eb2f64, #BA265D);
     grid-column: 3 / span 1; }
   .project__card--front-4 {
-    background-color: #097a71;
+    background-image: linear-gradient(#c69963, #54483A);
     grid-column: 4 / span 1; }
   .project__card--front-5 {
-    background-color: #53b4f5;
+    background-image: linear-gradient(#FF5049, #28B9B5);
     grid-column: 5 / span 1; }
   .project__card--front-6 {
-    background-color: #c97eec;
+    background-image: linear-gradient(#FBDB89, #F48982);
     grid-column: 6 / span 1; }
   .project__card--back-1 {
     grid-column: 1 / span 1; }
@@ -82,22 +87,22 @@
 
 .weather {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   font-size: 2rem;
-  margin-bottom: 3rem;
   height: 60vh;
-  width: 80vw;
+  width: 100%;
   background-color: darkgray;
   color: darkblue;
   border-radius: 7px;
   overflow: hidden; }
   .weather__text {
     display: flex;
+    width: 20%;
     flex-direction: column;
     justify-content: center;
-    align-self: center;
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-right: 4rem;
+    margin-left: 4rem;
     text-align: center;
     height: 80%;
     background-color: #808080;
@@ -108,12 +113,101 @@
       margin-left: 30%; }
 
 .bg-video {
-  width: 100%;
-  height: 100%; }
+  height: 100%;
+  margin-left: auto;
+  width: 70%;
+  object-fit: cover;
+  align-self: stretch; }
   .bg-video__content {
-    height: 100%;
-    width: 100%;
     object-fit: cover; }
+
+#main {
+  position: relative;
+  margin-bottom: 70px; }
+
+#carousel {
+  margin-top: 200px;
+  text-align: center;
+  height: 60px;
+  background-color: #111;
+  box-shadow: 0 3px 5px #111;
+  /* Initially hidden */
+  opacity: 0;
+  /* Will animate the transition */
+  -moz-transition: 0.4s opacity;
+  -webkit-transition: 0.4s opacity;
+  transition: 0.4s opacity; }
+
+#carousel.active {
+  opacity: 1; }
+
+#carousel li {
+  display: none;
+  list-style: none;
+  width: 150px;
+  height: 150px;
+  margin: -82px 18px 0;
+  position: relative;
+  -moz-transition: 0.4s all;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all; }
+
+#carousel li.visible {
+  display: inline-block; }
+
+#carousel li a img {
+  border: none; }
+
+#carousel li img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  position: relative;
+  z-index: 10; }
+
+/* Creating the cradle below the thumbnails.
+	Uses % so that it grows with the image. */
+#carousel li:after {
+  content: '';
+  background: url("../img/cradle.png") no-repeat top center;
+  background-size: contain;
+  bottom: 4%;
+  content: "";
+  height: 50px;
+  left: -6.5%;
+  position: absolute;
+  right: -6.5%;
+  width: auto;
+  z-index: 1; }
+
+#carousel li:hover {
+  height: 197px;
+  margin-top: -152px;
+  width: 222px; }
+
+.arrow {
+  background: url("../img/arrows.png") no-repeat;
+  width: 28px;
+  height: 28px;
+  opacity: 0.8;
+  text-indent: -999px;
+  overflow: hidden;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -428px;
+  margin-top: 25px; }
+
+.arrow:hover {
+  opacity: 1; }
+
+.arrow.next {
+  margin-left: 400px;
+  background-position: top right; }
 
 *,
 *::after,
@@ -129,10 +223,18 @@ html {
   line-height: 1.7; }
 
 body {
-  font-size: 2rem; }
+  font-size: 2rem;
+  width: 95vw;
+  padding: 4rem; }
 
 .overall {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
+  width: 90vw; }
+
+.test {
+  background-color: #fdd76d;
+  height: 90vh;
+  margin: 4rem;
   width: 100%; }
