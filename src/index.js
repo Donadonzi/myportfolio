@@ -179,6 +179,32 @@ ReactDOM.render(
 
 // eslint-disable-next-line no-undef
 })(jQuery);
+
+
+// ============== CODE FOR CHANGING BACKGROUND ===============//
+
+// document.getElementById("main").style.transition = 'all 1s';
+
+document.querySelector('.projects__list').addEventListener('mouseover', changeBG);
+
+function changeBG(event) {
+	const item = event.target.closest('.projects__list__item');
+	if(item) {
+		const className = item.dataset.num;
+		item.parentNode.parentNode.classList.add(`${className}`);
+	}	
+	
+}
+
+const list = document.querySelectorAll('.projects__list__item');
+list.forEach( el => el.addEventListener('mouseleave', removeBG));
+
+function removeBG(event) {
+	const className = event.target.dataset.num;
+	console.log(className);
+	event.target.parentNode.parentNode.classList.remove(`${className}`);	
+}
+
   
     
 
