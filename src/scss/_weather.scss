@@ -3,14 +3,11 @@
     justify-content: center;
     align-items: center;
     font-size: 2rem;
-    // margin-bottom: 4rem;
-    
     height: 60vh;
     width: 100%;
-    background-color: darkgray;
-    color: darkblue;
     border-radius: 7px;
     overflow: hidden;
+    
     
 
         &__text {
@@ -18,37 +15,32 @@
         width: 20%;
         flex-direction: column;
         justify-content: center;
-       
         margin-right: 4rem;
         margin-left: 4rem;
-        
+        padding: 6rem 4rem 4rem 4rem; 
         text-align: center;
         height: 80%;
-        background-color: #808080;
         border-radius: 7px;
 
         img {
             height: 10rem;
             width: 10rem;
             margin-left: 30%;
-        }
-       
+        }   
     }
-
 }
 
 
 
 .bg-video {
      
-    // width: 100%;
     height: 100%;
     margin-left: auto;
     width: 70%;
     object-fit: cover;
     align-self: stretch;
-   
-    
+    border-radius: 7px;
+    overflow: hidden;
 
     &__content {
         
@@ -57,7 +49,100 @@
         // object-fit: cover;
         // z-index: -1;
         object-fit: cover;
-   
+  
     }
 
 }
+
+.weather--ClearDay {
+    background-color: #97bafcc9;
+    border: 3px solid #00676e;
+    & p {
+        color: #356397;
+        background-color: #a0dff8;
+    }
+
+    & .bg-video {
+        border: 2px solid #284964;
+    }
+}
+
+.weather--RainyDay {
+    background-color: #60738b;
+    border: 3px solid #023477;
+    & p {
+        color: #f1f1f1;
+        background-color: #445f81;
+    }
+
+    & .bg-video {
+        border: 2px solid #577daf;
+    }
+}
+
+.weather--SnowyDay {
+    background-color: #254134;
+    border: 3px solid #323b2f;
+    & p {
+        color: #d2f0e7;
+        background-color: #3c5549;
+    }
+
+    & .bg-video {
+        border: 2px solid #4d5849;
+    }
+}
+
+.weather--GreySky {
+    background-color: #a59e89;
+    border: 3px solid #47443b;
+    & p {
+        color: #cfc7af;
+        background-color: #645f51;
+    }
+
+    & .bg-video {
+        border: 2px solid #807a6a;
+    }
+}
+
+.weather--ClearNight {
+    background-color: #23272e;
+    border: 3px solid #373e47;
+    & p {
+        color: #b8b8b9;
+        background-color: #2f455a;
+    }
+
+    & .bg-video {
+        border: 2px solid #5f6c7c;
+    }
+}
+
+.weather--RainyNight {
+    background-color: #5f2025bb;
+    border: 3px solid #8a7979;
+    & p {
+        color: #b9b9b9;
+        background-color: #443636;
+    }
+
+    & .bg-video {
+        border: 2px solid #5e5252;
+    }
+}
+
+.weather--SnowyNight {
+    background-color: #0e1a31;
+    border: 3px solid #a2c4f7;
+    & p {
+        color: #f4f7fc;
+        background-color: #19317577;
+    }
+
+    & .bg-video {
+        border: 2px solid #b4c5f5;
+    }
+}
+
+

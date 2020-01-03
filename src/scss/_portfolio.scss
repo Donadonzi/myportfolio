@@ -1,11 +1,13 @@
 .portfolio {
 	width: 100%;
-	background-color: #cecece;
+	background-image: linear-gradient(to bottom, #272727, #cecece );
+	
+	
 	height: 90vh;
     margin: 4rem 0 4rem 0;
 	border-radius: 7px;
 	overflow: hidden;
-	transition: all .8s;
+	transition: all 1s;
 	// z-index: 9;
 
 	
@@ -13,7 +15,7 @@
 .projects__gallery {   
 	height: 100%;
 	position: relative;
-	transition: all .8s;	
+	transition: all 1s;	
 }
 
 .projects__gallery__helper {
@@ -25,8 +27,10 @@
 	// z-index = 10;
 	// background-color: #cacaca;
 	background-image: linear-gradient(to bottom, #cecece, #272727);
+	
 	opacity: 0;
 	transition: opacity 1.5s;
+	
 }
 
 .projects__list {
@@ -37,12 +41,12 @@
 	/* Initially hidden */
 	opacity:0;
 	padding-top: 17rem;
-	transition: all .8s;
+	transition: all 1s;
 	
 
 	&:hover &__item:not(:hover) {
 		transform: scale(.9);
-		transition: all .8s;
+		transition: all 1s;
 	}
 
 	&.active {
@@ -63,13 +67,14 @@
 		height: auto;
 		position: relative;
 		box-shadow: 0 .5rem 3rem rgba(#000, .3);
+		transition: all 1s;
 
 		&:hover {
 			margin-top: -5rem;
 			transform: scale(1.3);
 			box-shadow: 0 2rem 5rem rgba(#000, .5);
 			z-index: 10;
-			transition: all .8s;
+			transition: all 1s;
 			
 		}
 
@@ -111,14 +116,14 @@
 	&.next {
 		background-position:top right;
 		position:absolute;
-		bottom:15%;
-		right: 5%;
+		bottom:35%;
+		right: 3%;
 	}
 
 	&.prev {
 		position:absolute;
-		bottom:15%;
-		left: 5%;
+		bottom:35%;
+		left: 3%;
 		display:none;
 	}
 }

@@ -78,7 +78,7 @@ class Current extends React.Component {
     render() { 
         return (
             <div className="weather">
-                <p className="weather__text">
+                <p className="weather__text" id="weather__text">
                     {this.state.msg1}<br />{this.state.msg2}
                     <img src={this.state.iconUrl} alt="Icon" />
                 </p>
