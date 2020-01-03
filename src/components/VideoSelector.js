@@ -26,29 +26,36 @@ const VideoSelector = (props) => {
     if (time === 'day') {
         if (props.code >= 200 && props.code <= 532) {
             videoUrl = RainyDay;
-            document.getElementById('weather').classList.toggle('weather--RainyDay');
+            document.getElementById('weather').className = '';
+            document.getElementById('weather').classList.add(`weather--RainyDay`);
         } else if (props.code >= 600 && props.code <= 785) {
             videoUrl = SnowyDay;
-            document.getElementById('weather').classList.toggle('weather--SnowyDay');
+            document.getElementById('weather').className = '';
+            document.getElementById('weather').classList.add(`weather--SnowyDay`);
         } else if (props.code === 803 || props.code === 804) {
             videoUrl = GreySky;
-            document.getElementById('weather').classList.toggle('weather--GreySky');
+            document.getElementById('weather').className = '';
+            document.getElementById('weather').classList.add(`weather--GreySky`);
         }else {
             videoUrl = ClearDay;
-            document.getElementById('weather').classList.toggle('weather--ClearDay');
+            document.getElementById('weather').className = '';
+            document.getElementById('weather').classList.add(`weather--ClearDay`);
             
         }
         
     } else if (time === 'night') { 
         if (props.code >= 200 && props.code <= 532) {
             videoUrl = RainyNight;
-            document.getElementById('weather').classList.toggle('weather--RainyNight');
+            document.getElementById('weather').className = '';
+            document.getElementById('weather').classList.add(`weather--RainyNight`);
         } else if (props.code >= 600 && props.code <= 785) {
             videoUrl = SnowyNight;
-            document.getElementById('weather').classList.toggle('weather--SnowyNight');
+            document.getElementById('weather').className = '';
+            document.getElementById('weather').classList.add(`weather--SnowyNight`);
         } else {
             videoUrl = ClearNight;
-            document.getElementById('weather').classList.toggle('weather--ClearNight');
+            document.getElementById('weather').className = '';
+            document.getElementById('weather').classList.add(`weather--ClearNight`);
         }
     }
 

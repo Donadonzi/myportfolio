@@ -56,7 +56,10 @@
 
 .weather--ClearDay {
     background-color: #97bafcc9;
-    border: 3px solid #00676e;
+    border: 3px solid #1c85db;
+    border-radius: 7px;
+    overflow: hidden;
+
     & p {
         color: #356397;
         background-color: #a0dff8;
@@ -70,6 +73,8 @@
 .weather--RainyDay {
     background-color: #60738b;
     border: 3px solid #023477;
+    border-radius: 7px;
+    overflow: hidden;
     & p {
         color: #f1f1f1;
         background-color: #445f81;
@@ -83,6 +88,8 @@
 .weather--SnowyDay {
     background-color: #254134;
     border: 3px solid #323b2f;
+    border-radius: 7px;
+    overflow: hidden;
     & p {
         color: #d2f0e7;
         background-color: #3c5549;
@@ -96,6 +103,8 @@
 .weather--GreySky {
     background-color: #a59e89;
     border: 3px solid #47443b;
+    border-radius: 7px;
+    overflow: hidden;
     & p {
         color: #cfc7af;
         background-color: #645f51;
@@ -109,6 +118,8 @@
 .weather--ClearNight {
     background-color: #23272e;
     border: 3px solid #373e47;
+    border-radius: 7px;
+    overflow: hidden;
     & p {
         color: #b8b8b9;
         background-color: #2f455a;
@@ -120,11 +131,13 @@
 }
 
 .weather--RainyNight {
-    background-color: #5f2025bb;
+    background-color: #551414;
     border: 3px solid #8a7979;
+    border-radius: 7px;
+    overflow: hidden;
     & p {
         color: #b9b9b9;
-        background-color: #443636;
+        background-color: #250000;
     }
 
     & .bg-video {
@@ -135,6 +148,9 @@
 .weather--SnowyNight {
     background-color: #0e1a31;
     border: 3px solid #a2c4f7;
+    border-radius: 7px;
+    overflow: hidden;
+    
     & p {
         color: #f4f7fc;
         background-color: #19317577;
