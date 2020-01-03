@@ -190,8 +190,10 @@ document.querySelector('.projects__list').addEventListener('mouseover', changeBG
 function changeBG(event) {
 	const item = event.target.closest('.projects__list__item');
 	if(item) {
+		item.style.transition = "all 1s";
 		const className = item.dataset.num;
 		item.parentNode.parentNode.classList.add(`${className}`);
+		document.querySelector('.projects__gallery__helper').style.opacity = 0;
 	}	
 	
 }
@@ -201,8 +203,10 @@ list.forEach( el => el.addEventListener('mouseleave', removeBG));
 
 function removeBG(event) {
 	const className = event.target.dataset.num;
+	event.target.style.transition = "all 1s";
 	console.log(className);
-	event.target.parentNode.parentNode.classList.remove(`${className}`);	
+	event.target.parentNode.parentNode.classList.remove(`${className}`);
+	document.querySelector('.projects__gallery__helper').style.opacity = 1;	
 }
 
   
