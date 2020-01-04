@@ -42,7 +42,9 @@ ReactDOM.render(
 		
 		//private variables
 		this._items = $(config.carousel + ' li'); //all the items in the carousel
+		this._texts = $(config.carousel + ' p');
 		this._chunks = []; //the li elements will be split into chunks. 
+		this._textChunk = [];
 		this._visibleChunkIndex = 0; //identifies the index from the this._chunks array that is currently being shown
 		
 
@@ -53,6 +55,7 @@ ReactDOM.render(
 				//remove visible tags
 				this._items.removeClass('visible');
 				
+				
 				//shuffle list
 				this._items.sort(function() { return 0.5 - Math.random() });
 				
@@ -62,6 +65,8 @@ ReactDOM.render(
 			
 			//split array of items into chunks
 			this._chunks = this._splitItems(this._items, this.chunkSize);
+			this._textChunk = this._splitItems(this._texts, this.chunkSize);
+			
 
 			var self = this;
 			
@@ -87,6 +92,12 @@ ReactDOM.render(
 			if (this._chunks[this._visibleChunkIndex - 1] !== undefined) {
 				this.showPrevItems();
 			}
+
+			if (this._textChunk[this._visibleChunkIndex - 1] !== undefined) {
+				this.showPrevItems();
+			}
+
+			
 		};
 		
 		//handle all code when next button is clicked
@@ -95,7 +106,7 @@ ReactDOM.render(
 			e.preventDefault();
 			
 			//as long as there are some items after the current visible ones, show the next ones
-			if (this._chunks[this._visibleChunkIndex + 1] !== undefined) {
+			if (this._textChunk[this._visibleChunkIndex + 1] !== undefined) {
 				this.showNextItems();
 			}
 		};
@@ -105,9 +116,11 @@ ReactDOM.render(
 			
 			//remove visible class from current visible chunk
 			$(this._chunks[this._visibleChunkIndex]).removeClass('visible');
+			$(this._textChunk[this._visibleChunkIndex]).removeClass('visible');
 			
 			//add visible class to the next chunk
 			$(this._chunks[this._visibleChunkIndex + 1]).addClass('visible');
+			$(this._textChunk[this._visibleChunkIndex + 1]).addClass('visible');
 			
 			//update the current visible chunk
 			this._visibleChunkIndex++;
@@ -122,9 +135,11 @@ ReactDOM.render(
 			
 			//remove visible class from current visible chunk
 			$(this._chunks[this._visibleChunkIndex]).removeClass('visible');
+			$(this._textChunk[this._visibleChunkIndex]).removeClass('visible');
 			
 			//add visible class to the previous chunk
 			$(this._chunks[this._visibleChunkIndex - 1]).addClass('visible');
+			$(this._textChunk[this._visibleChunkIndex - 1]).addClass('visible');
 			
 			//update the current visible chunk
 			this._visibleChunkIndex--;
@@ -145,6 +160,13 @@ ReactDOM.render(
 			else {
 				this.prevButton.show();
 			}
+
+			if (this._textChunk[this._visibleChunkIndex - 1] === undefined) {
+				this.prevButton.hide();
+			}
+			else {
+				this.prevButton.show();
+			}
 		};
 		
 		//Determine if the next button should be shown or not.
@@ -152,6 +174,13 @@ ReactDOM.render(
 			this.prevButton.show(); //the next button was clicked, so the previous button can show.
 			
 			if (this._chunks[this._visibleChunkIndex + 1] === undefined) {
+				this.nextButton.hide();
+			}
+			else {
+				this.nextButton.show();
+			}
+
+			if (this._textChunk[this._visibleChunkIndex + 1] === undefined) {
 				this.nextButton.hide();
 			}
 			else {
@@ -192,6 +221,7 @@ function changeBG(event) {
 		const className = item.dataset.num;
 		item.parentNode.parentNode.classList.add(`${className}`);
 		document.querySelector('.projects__gallery__helper').style.opacity = 0;
+		document.getElementById(`${className}`).classList.add('focused');
 	}		
 }
 
@@ -201,6 +231,7 @@ list.forEach( el => el.addEventListener('mouseleave', removeBG));
 function removeBG(event) {
 	const className = event.target.dataset.num;
 	event.target.parentNode.parentNode.classList.remove(`${className}`);
+	document.getElementById(`${className}`).classList.remove('focused');
 	document.querySelector('.projects__gallery__helper').style.opacity = 1;	
 }
 

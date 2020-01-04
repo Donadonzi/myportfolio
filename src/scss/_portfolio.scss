@@ -1,21 +1,56 @@
 .portfolio {
 	width: 100%;
 	background-image: linear-gradient(to bottom, #272727, #cecece );
-	
-	
 	height: 90vh;
     margin: 4rem 0 4rem 0;
 	border-radius: 7px;
 	overflow: hidden;
 	transition: all 1s;
-	// z-index: 9;
 
 	
+	
+	
 }
+
+.project__text {
+	font-size: 1.5rem;
+	color: #292828;
+	display: block;
+	z-index: 100;
+	background: transparent;
+	grid-row: 2 / span 1;
+	width: 75%;
+	align-self: end;
+	transition: all 1s;	
+	display: none;
+	
+}
+
+.visible {
+	display: block;
+}
+
+.focused {
+	transform: scale(1.5);
+	margin-top: -2rem;
+	color: white;
+}
+
+
+
+
 .projects__gallery {   
 	height: 100%;
 	position: relative;
-	transition: all 1s;	
+	transition: all 1s;
+	display: grid;
+	grid-template-columns: 10rem 1fr 10rem;
+	grid-template-rows: 22% 78%;
+	align-items: start;
+
+	&:hover .projects__list__item:not(:hover) {
+		transform: scale(.9);
+	}
 }
 
 .projects__gallery__helper {
@@ -25,7 +60,7 @@
 	top: 0;
 	left: 0;
 	// z-index = 10;
-	// background-color: #cacaca;
+	
 	background-image: linear-gradient(to bottom, #cecece, #272727);
 	
 	opacity: 0;
@@ -34,20 +69,27 @@
 }
 
 .projects__list {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: flex-start;
+	
 	text-align:center;
-	/* Initially hidden */
 	opacity:0;
-	padding-top: 17rem;
 	transition: all 1s;
+
+	height: 65%;
+
+	grid-column: 2 / span 1;
+	grid-row: 2 / span 1;
+
+	display: grid;
+	grid-template-columns:  repeat(3, 1fr);
+	grid-template-rows: 1fr 40%;
+	align-items: start;
+	justify-items: center;
 	
 
-	&:hover &__item:not(:hover) {
-		transform: scale(.9);
-		transition: all 1s;
-	}
+	// &:hover &__item:not(:hover) {
+	// 	transform: scale(.9);
+	// 	transition: all 1s;
+	// }
 
 	&.active {
 		opacity:1;
@@ -61,9 +103,9 @@
 	}
 
 	&__item {
-		display:none;
+		display: none;
 		list-style:none;
-		width: 25%;
+		width: 78%;
 		height: auto;
 		position: relative;
 		box-shadow: 0 .5rem 3rem rgba(#000, .3);

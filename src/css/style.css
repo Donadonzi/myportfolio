@@ -4,8 +4,9 @@
   width: 100%; }
 
 .header {
-  background-color: #8df58d;
+  background-color: #552e2e;
   margin-bottom: 4rem;
+  color: white;
   height: 10vh;
   width: 100%; }
 
@@ -207,10 +208,36 @@
   overflow: hidden;
   transition: all 1s; }
 
+.project__text {
+  font-size: 1.5rem;
+  color: #292828;
+  display: block;
+  z-index: 100;
+  background: transparent;
+  grid-row: 2 / span 1;
+  width: 75%;
+  align-self: end;
+  transition: all 1s;
+  display: none; }
+
+.visible {
+  display: block; }
+
+.focused {
+  transform: scale(1.5);
+  margin-top: -2rem;
+  color: white; }
+
 .projects__gallery {
   height: 100%;
   position: relative;
-  transition: all 1s; }
+  transition: all 1s;
+  display: grid;
+  grid-template-columns: 10rem 1fr 10rem;
+  grid-template-rows: 22% 78%;
+  align-items: start; }
+  .projects__gallery:hover .projects__list__item:not(:hover) {
+    transform: scale(0.9); }
 
 .projects__gallery__helper {
   width: 100%;
@@ -223,17 +250,17 @@
   transition: opacity 1.5s; }
 
 .projects__list {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: flex-start;
   text-align: center;
-  /* Initially hidden */
   opacity: 0;
-  padding-top: 17rem;
-  transition: all 1s; }
-  .projects__list:hover .projects__list__item:not(:hover) {
-    transform: scale(0.9);
-    transition: all 1s; }
+  transition: all 1s;
+  height: 65%;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 40%;
+  align-items: start;
+  justify-items: center; }
   .projects__list.active {
     opacity: 1; }
   .projects__list li.visible {
@@ -241,7 +268,7 @@
   .projects__list__item {
     display: none;
     list-style: none;
-    width: 25%;
+    width: 78%;
     height: auto;
     position: relative;
     box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.3);
@@ -305,6 +332,12 @@
 
 /* Creating the cradle below the thumbnails.
 	Uses % so that it grows with the image. */
+.footer {
+  background-color: #8b2ff3;
+  margin-top: 4rem;
+  height: 20vh;
+  width: 100%; }
+
 *,
 *::after,
 *::before {
