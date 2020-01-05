@@ -17,9 +17,10 @@
 	background: transparent;
 	grid-row: 2 / span 1;
 	width: 75%;
-	align-self: end;
+	// align-self: end;
 	transition: all 1s;	
 	display: none;
+	text-align: justify;
 		
 }
 
@@ -47,7 +48,7 @@
 	display: grid;
 	grid-template-columns:  repeat(3, 1fr);
 	grid-template-rows: 1fr 40%;
-	grid-row-gap: 7rem;
+	grid-row-gap: 5rem;
 	align-items: start;
 	justify-items: center;
 	

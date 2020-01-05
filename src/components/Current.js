@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import VideoSelector from './VideoSelector';
+import renderLoader from './VideoSelector';
+import clearLoader from './VideoSelector';
 
 
 
@@ -36,6 +38,8 @@ class Current extends React.Component {
     };
         
     getWeather = async(coords, apiKey) => {
+        // document.getElementById('weather').innerHTML = '';
+        // this.renderLoader(document.getElementById('weather'));
         try {
             const response = await axios.get(
                 `https://api.openweathermap.org/data/2.5/weather?` +
@@ -47,6 +51,7 @@ class Current extends React.Component {
 
             console.log('Received weather API response');
             console.log(response);
+            // this.clearLoader();
 
             this.setState({
                 code: response.data.weather[0].id,
@@ -55,11 +60,14 @@ class Current extends React.Component {
                     feels like ${Math.ceil(response.data.main.feels_like)}`,
                 iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png` 
             });
+            
         } catch (err) {
             alert(err);
         }
         
     };
+
+    
     
     capitalizeFirstLetter(string) {
         return string.charAt(0).toUpperCase() + string.slice(1);
@@ -77,6 +85,7 @@ class Current extends React.Component {
 
     render() { 
         return (
+            // <renderLoader(document.getElementById('weather')) />
             <div className="weather">
                 <p className="weather__text" id="weather__text">
                     {this.state.msg1}<br />{this.state.msg2}
@@ -94,4 +103,5 @@ export default Current;
 
 
 
-   
+
+
