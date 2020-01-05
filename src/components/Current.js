@@ -38,7 +38,7 @@ class Current extends React.Component {
     getWeather = async(coords, apiKey) => {
         try {
             const response = await axios.get(
-                `http://api.openweathermap.org/data/2.5/weather?` +
+                `https://api.openweathermap.org/data/2.5/weather?` +
                     `lat=${coords.latitude}&` +
                     `lon=${coords.longitude}&` +
                     `units=metric&` +
@@ -53,7 +53,7 @@ class Current extends React.Component {
                 msg1: `${this.capitalizeFirstLetter(response.data.weather[0].description)} in ${response.data.name}.`,
                 msg2: `It's currently ${Math.ceil(response.data.main.temp)} degrees,
                     feels like ${Math.ceil(response.data.main.feels_like)}`,
-                iconUrl: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png` 
+                iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png` 
             });
         } catch (err) {
             alert(err);
