@@ -226,7 +226,6 @@ function changeBG(event) {
 		document.querySelectorAll('.projects__list__item').forEach(el => el.classList.add('shrink'));
 		document.getElementById(`${className}`).classList.add('focused');
 		
-		// console.log(document.querySelectorAll('.project__list__photo'));
 		
 	}		
 }
