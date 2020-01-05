@@ -217,11 +217,17 @@ document.querySelector('.projects__list').addEventListener('mouseover', changeBG
 
 function changeBG(event) {
 	const item = event.target.closest('.projects__list__item');
+	
 	if(item) {
 		const className = item.dataset.num;
 		item.parentNode.parentNode.classList.add(`${className}`);
 		document.querySelector('.projects__gallery__helper').style.opacity = 0;
+		
+		document.querySelectorAll('.projects__list__item').forEach(el => el.classList.add('shrink'));
 		document.getElementById(`${className}`).classList.add('focused');
+		
+		// console.log(document.querySelectorAll('.project__list__photo'));
+		
 	}		
 }
 
@@ -229,10 +235,12 @@ const list = document.querySelectorAll('.projects__list__item');
 list.forEach( el => el.addEventListener('mouseleave', removeBG));
 
 function removeBG(event) {
+	document.querySelector('.projects__gallery__helper').style.opacity = 1;
 	const className = event.target.dataset.num;
 	event.target.parentNode.parentNode.classList.remove(`${className}`);
 	document.getElementById(`${className}`).classList.remove('focused');
-	document.querySelector('.projects__gallery__helper').style.opacity = 1;	
+	document.querySelectorAll('.projects__list__item').forEach(el => el.classList.remove('shrink'));
+		
 }
 
   

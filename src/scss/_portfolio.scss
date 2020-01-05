@@ -36,6 +36,10 @@
 	color: white;
 }
 
+.shrink {
+	transform: scale(.95);
+}
+
 
 
 
@@ -48,9 +52,6 @@
 	grid-template-rows: 22% 78%;
 	align-items: start;
 
-	&:hover .projects__list__item:not(:hover) {
-		transform: scale(.9);
-	}
 }
 
 .projects__gallery__helper {
@@ -117,6 +118,7 @@
 			box-shadow: 0 2rem 5rem rgba(#000, .5);
 			z-index: 10;
 			transition: all 1s;
+
 			
 		}
 

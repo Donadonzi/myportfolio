@@ -109,7 +109,7 @@
     .weather__text img {
       height: 10rem;
       width: 10rem;
-      margin-left: 30%; }
+      margin-left: 20%; }
 
 .bg-video {
   height: 100%;
@@ -120,6 +120,8 @@
   border-radius: 7px;
   overflow: hidden; }
   .bg-video__content {
+    height: 100%;
+    width: 100%;
     object-fit: cover; }
 
 .weather--ClearDay {
@@ -228,6 +230,9 @@
   margin-top: -2rem;
   color: white; }
 
+.shrink {
+  transform: scale(0.95); }
+
 .projects__gallery {
   height: 100%;
   position: relative;
@@ -236,8 +241,6 @@
   grid-template-columns: 10rem 1fr 10rem;
   grid-template-rows: 22% 78%;
   align-items: start; }
-  .projects__gallery:hover .projects__list__item:not(:hover) {
-    transform: scale(0.9); }
 
 .projects__gallery__helper {
   width: 100%;
