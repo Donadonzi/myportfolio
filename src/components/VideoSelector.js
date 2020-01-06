@@ -16,7 +16,7 @@ const DayOrNight= () => {
 
 };
 
-const VideoSelector = (props) => {
+ const VideoSelector = (props) => {
     
     console.log(`VideoSelector update with code=${props.code}`);
     const time = DayOrNight();
@@ -68,22 +68,4 @@ const VideoSelector = (props) => {
     );
 };
 
-
-
 export default VideoSelector;
-
-export const renderLoader = parent => {
-    const loader = `
-    <div class="loader">
-        <svg>
-            <use href="img/icons.svg#icon-cw"></use>
-        </svg>
-    </div> 
-    `;
-    parent.insertAdjacentHTML('afterbegin', loader);
-};
-
-export const clearLoader = () => {
-    const loader = document.querySelector(`.loader`);
-    if (loader) loader.parentElement.removeChild(loader);
-};

@@ -2,14 +2,28 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/style.css';
 import Current from './components/Current';
-
+// import Loader from './components/Loader';
+// import  usePromiseTracker  from 'react-promise-tracker';
 
 
 
 
 ReactDOM.render(
-    <Current />, document.querySelector('#weather')
+	<Current />,
+	document.getElementById('weather')
 );
+
+
+
+// ReactDOM.render(
+// 	<div>
+// 		<Loader />
+// 		<Current />	
+// 	</div>,
+// 	document.getElementById('weather')
+// 	);
+	
+	
 
 
 // =============== JQUERY CODE FOR THUMBNAILS =================//
