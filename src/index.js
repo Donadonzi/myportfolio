@@ -235,11 +235,9 @@ function changeBG(event) {
 	if(item) {
 		const className = item.dataset.num;
 		item.parentNode.parentNode.classList.add(`${className}`);
-		document.querySelector('.projects__gallery__helper').style.opacity = 0;
-		
+		document.querySelector('.projects__gallery__helper').style.opacity = 1;
 		document.querySelectorAll('.projects__list__item').forEach(el => el.classList.add('shrink'));
 		document.getElementById(`${className}`).classList.add('focused');
-		
 		
 	}		
 }
@@ -248,7 +246,7 @@ const list = document.querySelectorAll('.projects__list__item');
 list.forEach( el => el.addEventListener('mouseleave', removeBG));
 
 function removeBG(event) {
-	document.querySelector('.projects__gallery__helper').style.opacity = 1;
+	document.querySelector('.projects__gallery__helper').style.opacity = 0;
 	const className = event.target.dataset.num;
 	event.target.parentNode.parentNode.classList.remove(`${className}`);
 	document.getElementById(`${className}`).classList.remove('focused');
