@@ -1,57 +1,52 @@
-.about {
-    background-color: #e6e6e6;
-    border-radius: 7px;
-    height: 90vh;
+.about-section {
+    background-color: #eeeeee;
+    height: 100vh;
     width: 100%;
+    margin-bottom: 5rem;
+    border-radius: 7px;
+    display: flex;
     padding: 5rem;
+    
+    
+
+   
+}
+
+.about {    
+    margin: auto;
+    width: 100%;
+    height: 100%;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 2rem;
+    grid-template-columns: repeat(2, max-content);
+    grid-column-gap: 5rem;
     justify-items: center;
     align-items: center;
 
     
 
-    &__text {
-        
+    &__text { 
         text-indent: 1.4rem;
         font-size: 1.8rem;
-        width: 80%;
+        width: 25vw;
         
         &.p-1 {
-            // align-self: center;
-            margin-bottom: 4rem;
+            align-self: start;   
         }
 
         &.p-2 {
-            // align-self: center;
-            
-        }
-       
+            align-self: end; 
+        }   
     }  
 }
 
 
-// .projects {  
-//     height: 100%;
-//     width: 100%;
-//     display: grid;
-//     grid-template-columns: repeat(2, 1fr);
-//     grid-gap: 2rem;
-//     align-items: center;
-//     justify-items: center;
-//     // padding: 4rem;
-    
-// }    
-
 .project__card {
     height: 100%;
-    width: 80%;
+    width: 40vw;
     
     perspective: 100rem;
     position: relative;
-    // justify-self: center;
-    margin-left: 25rem;
+    
 
     &__side {
         backface-visibility: hidden;
@@ -60,11 +55,6 @@
         left: 0;
         transition: all 1.5s;
        
-
-        // img {
-        //     width: 100%;
-        //     height: 100%;
-        // }
         
         &--front {
             width: 100%;
@@ -72,14 +62,9 @@
         }
  
         &--back {
-            
-            position: absolute;
-            top: 0;
-            left: 0;
             transform: rotateY(180deg);
             width: 100%;
-            height: 100%; 
-                     
+            height: 100%;             
         }
     }
     
@@ -93,39 +78,33 @@
 
     &--front-1 {
         background-image: url("../img/portfolio-10.jpg");
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
-        margin-bottom: -4rem;
-                
-        // grid-column: 1 / span 1;
+        background-position:  center;
        
     }
 
     &--front-2 {
         background-image: url("../img/portfolio-21.jpg");
-        margin-top: -4rem;
-        background-size: cover;
-        
-        // grid-column: 2 / span 1; 
-
-        
-
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position:  center;
     }
 
    
     &--back-1 {
         background-image: url("../img/portfolio-17.jpg");
         background-repeat: no-repeat;
-        background-size: cover;
-        // grid-column: 1 / span 1;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position:  center;
     }
 
     &--back-2 {
-        // grid-column: 2 / span 1;
         background-image: url("../img/portfolio-22.jpg");
-        background-size: cover;
-    }
-
-      
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position:  center;
+    }   
 }
 

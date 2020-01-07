@@ -14,8 +14,8 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="style sheet" href="../src/css/style.css" />
     <script src="../src/index.js"></script>
-    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     
     
     
@@ -112,7 +112,7 @@
           <ul id="carousel" class="projects__list">
 
             <li class="visible projects__list__item" data-num="project-1">
-              <a href="http://google.com" class="projects__list__link">
+              <a href="" class="projects__list__link">
                 <img class="projects__list__photo" src="./img/sites/omnifood.jpg" alt="Omnifood" data-num="project-1" />
               </a>  
             </li>
@@ -193,9 +193,9 @@
         </div> 
       </section>
 
-      <section class="about">
+      <section class="about-section">
 
-        
+        <div class="about">
 
           <p class="about__text p-1">
             I am a Front-end Developer / Interior Designer. Actually I'm having a hard time figuring out 
@@ -204,26 +204,24 @@
             area for a few years afterwards.
           </p>
 
-          <!-- <div class="about__photos"> -->
-
-            <!-- <div class="projects"> -->
               <div class="project__card">
                 <div class="project__card__side project__card__side--front project__card--front-1 ">
-                  <!-- <img src="./img/portfolio-10.jpg" alt="Interior Design sample" /> -->
+                 
                 </div>
                 <div class="project__card__side project__card__side--back project__card--back-1 ">
-                  <!-- <img src="./img/portfolio-17.jpg" alt="Interior Design sample" /> -->
+                  
                 </div>
               </div>
 
               <div class="project__card">
                 <div class="project__card__side project__card__side--front project__card--front-2 ">
-                  <!-- <img src="./img/portfolio-21.jpg" alt="Interior Design sample" /> -->
+                  
                 </div>
                 <div class="project__card__side project__card__side--back project__card--back-2 ">
-                  <!-- <img src="./img/portfolio-22.jpg" alt="Interior Design sample" /> -->
+                  
                 </div>
               </div>
+              
               <p class="about__text p-2">
                 Not that I didn't love that, but recently I have been missing coding and my good old
                 friend, software development and everything. So I'm getting back in the game catching up with all the new and
@@ -231,8 +229,8 @@
                   coding makes me feel powerful!
               </p>
 
-            <!-- </div> --> 
-          <!-- </div> -->
+        </div>
+
       </section>
    
     </div>
@@ -242,16 +240,55 @@
         <p>
         Built by Donya Teymourifar &copy; 2020
         </p>
-        <a href="https://reactjs.org/">
-          Made with React
-          <img src="logo192.png" alt="React logo" />
-        </a>
-        
+        <div class="tools__icons">
+
+            <svg class="tools__icon">
+              <use xlink:href="./img/sprite.svg#icon-react"></use>
+            </svg>
+         
+          
+          
+            <svg class="tools__icon">
+              <use xlink:href="./img/sprite.svg#icon-javascript"></use>
+            </svg>
+             
+
+          
+            <svg class="tools__icon">
+              <use xlink:href="./img/sprite.svg#icon-css3"></use>
+            </svg>
+          
+          
+          
+            <svg class="tools__icon">
+              <use xlink:href="./img/sprite.svg#icon-html5"></use>
+            </svg>
+       
+        </div>    
     </div>
       <div class="footer__links">
-        <a href="#">LinkedIn</a>
-        <a href="#">Github</a>
-        <a href="#">Contact me</a>
+        <a href="http://linkedin.com/in/donyateymourifar">
+          <svg class="footer__icon">
+            <use xlink:href="./img/sprite.svg#icon-linkedin"></use>
+          </svg>
+        </a>
+        
+      </div>
+      <div class="footer__links">
+        <a href="http://https://github.com/Donadonzi">
+          <svg class="footer__icon">
+            <use xlink:href="./img/sprite.svg#icon-github"></use>
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer__links gmail">
+        <!-- <a href="#"> -->
+          <svg class="footer__icon">
+            <use xlink:href="./img/sprite.svg#icon-gmail"></use>
+          </svg>
+        <!-- </a> -->
+        <p>donya.teymourifar@gmail.com</p>
       </div>
     </footer>
     

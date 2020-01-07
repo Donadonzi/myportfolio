@@ -1,27 +1,35 @@
-.about {
-  background-color: #e6e6e6;
-  border-radius: 7px;
-  height: 90vh;
+.about-section {
+  background-color: #eeeeee;
+  height: 100vh;
   width: 100%;
-  padding: 5rem;
+  margin-bottom: 5rem;
+  border-radius: 7px;
+  display: flex;
+  padding: 5rem; }
+
+.about {
+  margin: auto;
+  width: 100%;
+  height: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 2rem;
+  grid-template-columns: repeat(2, max-content);
+  grid-column-gap: 5rem;
   justify-items: center;
   align-items: center; }
   .about__text {
     text-indent: 1.4rem;
     font-size: 1.8rem;
-    width: 80%; }
+    width: 25vw; }
     .about__text.p-1 {
-      margin-bottom: 4rem; }
+      align-self: start; }
+    .about__text.p-2 {
+      align-self: end; }
 
 .project__card {
   height: 100%;
-  width: 80%;
+  width: 40vw;
   perspective: 100rem;
-  position: relative;
-  margin-left: 25rem; }
+  position: relative; }
   .project__card__side {
     backface-visibility: hidden;
     position: absolute;
@@ -32,9 +40,6 @@
       width: 100%;
       height: 100%; }
     .project__card__side--back {
-      position: absolute;
-      top: 0;
-      left: 0;
       transform: rotateY(180deg);
       width: 100%;
       height: 100%; }
@@ -44,20 +49,25 @@
     transform: rotateY(0deg); }
   .project__card--front-1 {
     background-image: url("../img/portfolio-10.jpg");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
-    margin-bottom: -4rem; }
+    background-position: center; }
   .project__card--front-2 {
     background-image: url("../img/portfolio-21.jpg");
-    margin-top: -4rem;
-    background-size: cover; }
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
   .project__card--back-1 {
     background-image: url("../img/portfolio-17.jpg");
     background-repeat: no-repeat;
-    background-size: cover; }
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
   .project__card--back-2 {
     background-image: url("../img/portfolio-22.jpg");
-    background-size: cover; }
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center; }
 
 .header {
   background-color: #552e2e;
@@ -317,18 +327,34 @@
 	Uses % so that it grows with the image. */
 .footer {
   font-size: 1.2rem;
-  color: #cacaca;
-  background-color: #013b57;
-  margin-top: 4rem;
+  color: #202020;
+  background-color: #eeeeee;
+  margin-bottom: 4rem;
   height: 10vh;
   width: 100%;
   padding: 1.5rem;
-  border-radius: 7px; }
-  .footer a {
-    color: white; }
-  .footer img {
-    height: 2rem;
-    width: 2rem; }
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-evenly; }
+  .footer__links:visited, .footer__links:active {
+    display: block; }
+  .footer__icon {
+    height: 2.5rem;
+    width: 2.5rem; }
+
+.footer__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.tools__icon {
+  height: 1.4rem;
+  width: 1.4rem; }
+
+.gmail {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 *,
 *::after,
