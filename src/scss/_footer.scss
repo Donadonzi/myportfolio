@@ -1,7 +1,20 @@
 .footer {
-    
-    background-color: #8b2ff3;
+    font-size: 1.2rem;
+    color: #cacaca;
+    background-color: #013b57;
     margin-top: 4rem;
-    height: 20vh;
+    height: 10vh;
     width: 100%;
+    padding: 1.5rem;
+    border-radius: 7px;
+
+    a {
+        color: white;
+    }
+
+    img {
+        height: 2rem;
+        width: 2rem;
+    }
 }
+

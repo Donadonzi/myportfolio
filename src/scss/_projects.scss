@@ -1,153 +1,157 @@
-.projects {
-    background-color: #dad8d8;
-    margin-bottom: 4rem;
-    margin-top: 4rem;
-    height: 100vh;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-gap: 2rem;
-    align-items: center;
-    justify-items: center;
-    padding: 4rem;
-    
-}    
-.project__card {
-    height: 80%;
-    width: 100%;
-    perspective: 100rem;
-    position: relative;
+//  ========== COMMENTING OUT THE WHOLE FILE TO PREVENT OVERRIDING WITH THE ABOUT ME SECTION =========
 
-    &__side {
-        backface-visibility: hidden;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transition: all 1s;
+// .projects {
+//     background-color: #dad8d8;
+//     margin-bottom: 4rem;
+//     margin-top: 4rem;
+//     height: 100vh;
+//     width: 100%;
+//     display: grid;
+//     grid-template-columns: repeat(6, 1fr);
+//     grid-gap: 2rem;
+//     align-items: center;
+//     justify-items: center;
+//     padding: 4rem;
+    
+// }    
+// .project__card {
+//     height: 80%;
+//     width: 100%;
+//     perspective: 100rem;
+//     position: relative;
+
+//     &__side {
+//         backface-visibility: hidden;
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         transition: all 1s;
         
-        &--front {
-            width: 100%;
-            height: 100%;      
-        }
+//         &--front {
+//             width: 100%;
+//             height: 100%;      
+//         }
  
-        &--back {
-            background-color: white;
-            position: absolute;
-            top: 0;
-            left: 0;
-            transform: rotateY(180deg);
-            width: 100%;
-            height: 100%; 
+//         &--back {
+//             background-color: white;
+//             position: absolute;
+//             top: 0;
+//             left: 0;
+//             transform: rotateY(180deg);
+//             width: 100%;
+//             height: 100%; 
                      
-        }
-    }
+//         }
+//     }
     
-    &:hover &__side--front {
-        transform: rotateY(180deg);
-    }
+//     &:hover &__side--front {
+//         transform: rotateY(180deg);
+//     }
 
-    &:hover &__side--back {
-        transform: rotateY(0deg);
-    }
+//     &:hover &__side--back {
+//         transform: rotateY(0deg);
+//     }
 
-    &--front-1 {
-        background-image: linear-gradient(#e67e22, #555 );
-        grid-column: 1 / span 1;
-        /* ========= COLORS ==========
-        Main Orange Color: #e67e22
-        background-color: #fff;
-        color: #555;
-        background-color: #cf6d17;
-        background-color: #f4f4f4; */
-    }
+//     &--front-1 {
+//         background-image: linear-gradient(#e67e22, #555 );
+//         grid-column: 1 / span 1;
+//         /* ========= COLORS ==========
+//         Main Orange Color: #e67e22
+//         background-color: #fff;
+//         color: #555;
+//         background-color: #cf6d17;
+//         background-color: #f4f4f4; */
+//     }
 
-    &--front-2 {
-        background-image: linear-gradient(#7ed56f, darken(#28b485, 20%));
+//     &--front-2 {
+//         background-image: linear-gradient(#7ed56f, darken(#28b485, 20%));
         
-        grid-column: 2 / span 1; 
+//         grid-column: 2 / span 1; 
 
-        // ======= COLORS ===============
-        // $color-primary: #55c57a;
-        // $color-primary-light: #7ed56f;
-        // $color-primary-dark: #28b485;
-        // $color-grey-dark: #777;
-        // $color-grey-dark-2: #999;
-        // $color-grey-dark-3: #333;
-        // $color-grey-light-1: #f7f7f7;
-        // $color-grey-light-2: #eee;
+//         // ======= COLORS ===============
+//         // $color-primary: #55c57a;
+//         // $color-primary-light: #7ed56f;
+//         // $color-primary-dark: #28b485;
+//         // $color-grey-dark: #777;
+//         // $color-grey-dark-2: #999;
+//         // $color-grey-dark-3: #333;
+//         // $color-grey-light-1: #f7f7f7;
+//         // $color-grey-light-2: #eee;
 
-    }
+//     }
 
-    &--front-3 {
-        background-image: linear-gradient(#eb2f64, #BA265D);
-        grid-column: 3 / span 1;
-    // ======= COLORS ===============   
-        // Primary: #eb2f64
-        // Primary light: #FF3366
-        // Primary dark: #BA265D
+//     &--front-3 {
+//         background-image: linear-gradient(#eb2f64, #BA265D);
+//         grid-column: 3 / span 1;
+//     // ======= COLORS ===============   
+//         // Primary: #eb2f64
+//         // Primary light: #FF3366
+//         // Primary dark: #BA265D
 
-        // Grey light 1: #faf9f9
-        // Grey light 2: #f4f2f2
-        // Grey light 3: #f0eeee
-        // Grey light 4: #ccc
+//         // Grey light 1: #faf9f9
+//         // Grey light 2: #f4f2f2
+//         // Grey light 3: #f0eeee
+//         // Grey light 4: #ccc
 
-        // Grey dark 1: #333
-        // Grey dark 2: #777
-        // Grey dark 3: #999
-    }
+//         // Grey dark 1: #333
+//         // Grey dark 2: #777
+//         // Grey dark 3: #999
+//     }
 
-    &--front-4 {
-        background-image: linear-gradient(#c69963, #54483A );
-        grid-column: 4 / span 1;
-    // ======= COLORS =============== 
-        // $color-primary: #c69963;
-        // $color-primary-dark: #B28451;
+//     &--front-4 {
+//         background-image: linear-gradient(#c69963, #54483A );
+//         grid-column: 4 / span 1;
+//     // ======= COLORS =============== 
+//         // $color-primary: #c69963;
+//         // $color-primary-dark: #B28451;
 
-        // $color-secondary: #101d2c;
+//         // $color-secondary: #101d2c;
 
-        // $color-grey-light-1: #f9f7f6;
-        // $color-grey-light-2: #aaa;
+//         // $color-grey-light-1: #f9f7f6;
+//         // $color-grey-light-2: #aaa;
 
-        // $color-grey-dark-1: #54483A;
-        // $color-grey-dark-2: #6D5D4B;
-    }
+//         // $color-grey-dark-1: #54483A;
+//         // $color-grey-dark-2: #6D5D4B;
+//     }
 
-    &--front-5 {
-        // background-image: linear-gradient(#28B9B5, #FF5049 );
-        background-image: linear-gradient(#FF5049, #28B9B5 );
-        grid-column: 5 / span 1;
+//     &--front-5 {
+//         // background-image: linear-gradient(#28B9B5, #FF5049 );
+//         background-image: linear-gradient(#FF5049, #28B9B5 );
+//         grid-column: 5 / span 1;
 
-        // color: #28B9B5;
-        // color: #FF5049;
-    }
+//         // color: #28B9B5;
+//         // color: #FF5049;
+//     }
 
-    &--front-6 {
-        background-image: linear-gradient( #FBDB89, #F48982);
-        grid-column: 6 / span 1;
-    }
+//     &--front-6 {
+//         background-image: linear-gradient( #FBDB89, #F48982);
+//         grid-column: 6 / span 1;
+//     }
 
-    &--back-1 {
-        grid-column: 1 / span 1;
-    }
+//     &--back-1 {
+//         grid-column: 1 / span 1;
+//     }
 
-    &--back-2 {
-        grid-column: 2 / span 1;
-    }
+//     &--back-2 {
+//         grid-column: 2 / span 1;
+//     }
 
-    &--back-3 {
-        grid-column: 3 / span 1;
-    }
+//     &--back-3 {
+//         grid-column: 3 / span 1;
+//     }
 
-    &--back-4 {
-        grid-column: 4 / span 1;
-    }
+//     &--back-4 {
+//         grid-column: 4 / span 1;
+//     }
 
-    &--back-5 {
-        grid-column: 5 / span 1;
-    }
+//     &--back-5 {
+//         grid-column: 5 / span 1;
+//     }
 
-    &--back-6 {
-        grid-column: 6 / span 1;
-    }    
-}
+//     &--back-6 {
+//         grid-column: 6 / span 1;
+//     }    
+// }
+
+// */
 

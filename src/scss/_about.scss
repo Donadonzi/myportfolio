@@ -1,6 +1,131 @@
 .about {
-    background-color: aquamarine;
-   
-    height: 100vh;
+    background-color: #e6e6e6;
+    border-radius: 7px;
+    height: 90vh;
     width: 100%;
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    justify-items: center;
+    align-items: center;
+
+    
+
+    &__text {
+        
+        text-indent: 1.4rem;
+        font-size: 1.8rem;
+        width: 80%;
+        
+        &.p-1 {
+            // align-self: center;
+            margin-bottom: 4rem;
+        }
+
+        &.p-2 {
+            // align-self: center;
+            
+        }
+       
+    }  
 }
+
+
+// .projects {  
+//     height: 100%;
+//     width: 100%;
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     grid-gap: 2rem;
+//     align-items: center;
+//     justify-items: center;
+//     // padding: 4rem;
+    
+// }    
+
+.project__card {
+    height: 100%;
+    width: 80%;
+    
+    perspective: 100rem;
+    position: relative;
+    // justify-self: center;
+    margin-left: 25rem;
+
+    &__side {
+        backface-visibility: hidden;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all 1.5s;
+       
+
+        // img {
+        //     width: 100%;
+        //     height: 100%;
+        // }
+        
+        &--front {
+            width: 100%;
+            height: 100%;     
+        }
+ 
+        &--back {
+            
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotateY(180deg);
+            width: 100%;
+            height: 100%; 
+                     
+        }
+    }
+    
+    &:hover &__side--front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0deg);
+    }
+
+    &--front-1 {
+        background-image: url("../img/portfolio-10.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-bottom: -4rem;
+                
+        // grid-column: 1 / span 1;
+       
+    }
+
+    &--front-2 {
+        background-image: url("../img/portfolio-21.jpg");
+        margin-top: -4rem;
+        background-size: cover;
+        
+        // grid-column: 2 / span 1; 
+
+        
+
+    }
+
+   
+    &--back-1 {
+        background-image: url("../img/portfolio-17.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        // grid-column: 1 / span 1;
+    }
+
+    &--back-2 {
+        // grid-column: 2 / span 1;
+        background-image: url("../img/portfolio-22.jpg");
+        background-size: cover;
+    }
+
+      
+}
+

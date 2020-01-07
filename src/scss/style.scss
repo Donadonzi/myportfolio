@@ -18,11 +18,12 @@ html {
     font-weight: 400;
     font-size: 62.5%;
     line-height: 1.7;
+    background-color: #f8f8f8;
 }
 
 body {
     // padding: 3rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
     width: 95vw;
     padding: 4rem;
     
@@ -43,7 +44,7 @@ body {
     border: 1px solid #119191;
     border-radius: 7px;
     height: 50vh;
-    width: 40vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;

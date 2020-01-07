@@ -9,14 +9,14 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <link rel="style sheet" href="../src/css/style.css" />
     <script src="../src/index.js"></script>
     <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- <script src="../src/components/Thumbnails.js"></script> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
     
     
     <title>DonZ Portfolio</title>
@@ -104,43 +104,43 @@
         
         <div id="main" class="projects__gallery">
 
-
           <span class="projects__gallery__helper">&nbsp;</span>
 
-         
-        
-        
-          <!-- <a class="arrow prev"><span>Prev</span></a>
-                        <a class="arrow next"><span>Next</span></a> -->
           <a class="arrow prev"></a>
           <a class="arrow next"></a>
         
           <ul id="carousel" class="projects__list">
+
             <li class="visible projects__list__item" data-num="project-1">
               <a href="http://google.com" class="projects__list__link">
                 <img class="projects__list__photo" src="./img/sites/omnifood.jpg" alt="Omnifood" data-num="project-1" />
               </a>  
             </li>
+
             <li class="visible projects__list__item" data-num="project-2">
               <a href="#" class="projects__list__link">
                 <img class="projects__list__photo" src="./img/sites/natours.jpg" alt="Natours" data-num="project-2" />
               </a>
             </li>
+
             <li class="visible projects__list__item" data-num="project-3">
               <a href="#" class="projects__list__link">
                 <img class="projects__list__photo" src="./img/sites/trillo.jpg" alt="Trillo" data-num="project-3" />
               </a>
             </li>
+
             <li class="projects__list__item" data-num="project-4">
               <a href="#" class="projects__list__link">
                 <img class="projects__list__photo" src="./img/sites/nexter.jpg" alt="Nexter" data-num="project-4" />
               </a>
             </li>
+
             <li class="projects__list__item" data-num="project-5">
               <a href="#" class="projects__list__link">
                 <img class="projects__list__photo" src="./img/sites/budgety.jpg" alt="Budgety" data-num="project-5" />
               </a>
             </li>
+
             <li class="projects__list__item" data-num="project-6">
               <a href="#" class="projects__list__link">
                 <img class="projects__list__photo" src="./img/sites/forkify.jpg" alt="Forkify" data-num="project-6" />
@@ -177,7 +177,7 @@
 
             <p class="project__text" id="project-5">
               This is a web application for calculating income, expense and budget. I built it through my JavaScript
-              course. As you see, there is not much styling going on there. The focus here was mostly to learn JS.
+              course. There is not much styling going on there. The focus here was mostly to learn JavaScript.
             </p>
 
             <p class="project__text" id="project-6">
@@ -190,25 +190,69 @@
             </p>
         
           </ul>
-
-          
-
         </div> 
-
-        
-        
-
       </section>
 
       <section class="about">
-          About me
+
+        
+
+          <p class="about__text p-1">
+            I am a Front-end Developer / Interior Designer. Actually I'm having a hard time figuring out 
+            which one I am more passionate about! Not very long after getting my Master's degree in IT Engineering,
+             I took a detour; Kissed computer science goodbye and studied interior design for 3 years and worked in that 
+            area for a few years afterwards.
+          </p>
+
+          <!-- <div class="about__photos"> -->
+
+            <!-- <div class="projects"> -->
+              <div class="project__card">
+                <div class="project__card__side project__card__side--front project__card--front-1 ">
+                  <!-- <img src="./img/portfolio-10.jpg" alt="Interior Design sample" /> -->
+                </div>
+                <div class="project__card__side project__card__side--back project__card--back-1 ">
+                  <!-- <img src="./img/portfolio-17.jpg" alt="Interior Design sample" /> -->
+                </div>
+              </div>
+
+              <div class="project__card">
+                <div class="project__card__side project__card__side--front project__card--front-2 ">
+                  <!-- <img src="./img/portfolio-21.jpg" alt="Interior Design sample" /> -->
+                </div>
+                <div class="project__card__side project__card__side--back project__card--back-2 ">
+                  <!-- <img src="./img/portfolio-22.jpg" alt="Interior Design sample" /> -->
+                </div>
+              </div>
+              <p class="about__text p-2">
+                Not that I didn't love that, but recently I have been missing coding and my good old
+                friend, software development and everything. So I'm getting back in the game catching up with all the new and
+                 exciting tools which make coding more fun. I was just thinking to myself the other day that, successfully
+                  coding makes me feel powerful!
+              </p>
+
+            <!-- </div> --> 
+          <!-- </div> -->
       </section>
    
     </div>
-    <!-- <noscript>You need to enable JavaScript to run this app.</noscript> -->
-    <!-- <div id="root">TEST</div> -->
+    
     <footer class="footer">
-      This is the footer.
+      <div class="footer__text">
+        <p>
+        Built by Donya Teymourifar &copy; 2020
+        </p>
+        <a href="https://reactjs.org/">
+          Made with React
+          <img src="logo192.png" alt="React logo" />
+        </a>
+        
+    </div>
+      <div class="footer__links">
+        <a href="#">LinkedIn</a>
+        <a href="#">Github</a>
+        <a href="#">Contact me</a>
+      </div>
     </footer>
     
   </body>
