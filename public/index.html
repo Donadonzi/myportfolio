@@ -25,9 +25,13 @@
 
     <div class="overall">
 
+      <section class="section__header">
 
-      <section class="header">
-        This is the header
+        <div class="header">
+          <a href="#section-about" class="header__link">About me</a>
+          <a href="#section-portfolio" class="header__link">Portfolio</a>
+        </div>
+
       </section>
       
       
@@ -100,7 +104,7 @@
           </div>  
       </section> -->
 
-      <section class="portfolio">
+      <section class="portfolio" id="section-portfolio">
         
         <div id="main" class="projects__gallery">
 
@@ -193,7 +197,7 @@
         </div> 
       </section>
 
-      <section class="about-section">
+      <section class="section-about" id="section-about">
 
         <div class="about">
 
@@ -282,14 +286,17 @@
         </a>
       </div>
 
-      <div class="footer__links gmail">
-        <!-- <a href="#"> -->
-          <svg class="footer__icon">
-            <use xlink:href="./img/sprite.svg#icon-gmail"></use>
-          </svg>
-        <!-- </a> -->
-        <p>donya.teymourifar@gmail.com</p>
+      <div class="footer__links">
+          <address class="footer__links__mailto">
+            <a href="mailto:donya.teymourifar@gmail.com" class="mailto__link">
+              <svg class="footer__icon gmail__icon">
+                <use xlink:href="./img/sprite.svg#icon-gmail"></use>
+              </svg>
+              <p class="gmail__text">donya.teymourifar@gmail.com</p>
+            </a> 
+          </address>
       </div>
+
     </footer>
     
   </body>

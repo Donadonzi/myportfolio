@@ -29,13 +29,23 @@
 }
 
 .tools__icon {
-    height: 1.4rem;
-    width: 1.4rem;
+    height: 1.7rem;
+    width: 1.7rem;
+    // box-shadow: .5rem .5rem .5rem #d1d1d1;
 }
 
-.gmail {    
+
+.mailto__link {
+    text-decoration: none;
+    font-style: normal;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
+}
+
+.mailto__link:link,
+.mailto__link:visited {
+    color: #202020;
 }
 
