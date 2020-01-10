@@ -16,9 +16,8 @@
     width: 100%;
     display: flex;
     align-items: center;
-    
-    @include respond(tab-port) { 
-           
+
+    @include respond(tab-port) {     
         justify-content: space-evenly; 
     } 
 
@@ -36,6 +35,10 @@
         border-top: 1px solid transparent;
         transition: all .6s;
         flex-shrink: 0;
+
+        @include respond(phone) {
+            width: 24vw;
+        }
 
         
     }

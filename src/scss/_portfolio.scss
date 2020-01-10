@@ -1,11 +1,15 @@
 .portfolio {
 	width: 100%;
 	background-image: linear-gradient(#eeeeee 0%, #b4b4b4 25%, #6b6a6a 50%, #b4b4b4 75%, #eeeeee 100%);
-	height: 95vh;
+	max-height: 95vh;
     margin: 4rem 0 4rem 0;
 	border-radius: 7px;
 	overflow: hidden;
 	transition: all 1s;
+
+	@include respond(phone) {
+		// height: 50vh;
+	}
 	
 }
 
@@ -19,6 +23,10 @@
 	transition: all 1s;	
 	display: none;
 	text-align: center;
+
+	@include respond(phone) {
+		width: 80%;
+	}
 		
 }
 
@@ -33,6 +41,11 @@
 
 	@include respond(tab-land) {
 		grid-template-rows: 1fr;
+	}
+
+	@include respond(phone) {
+		grid-template-columns: 5rem 1fr 5rem;
+		grid-template-rows: 22% 78%;
 	}
 }
 
@@ -54,6 +67,11 @@
 	grid-row-gap: 5rem;
 	align-items: start;
 	justify-items: center;
+
+	@include respond(phone) {
+		grid-template-columns: 1fr;
+		height: 80%;
+	}
 	
 	&.active {
 		opacity:1;	

@@ -10,6 +10,10 @@
     display: flex;
     justify-content: space-evenly;
 
+    @include respond(phone) {
+        justify-content: space-between;
+    }
+
     &__links:visited,
     &__links:active {    
         display: block;
@@ -18,6 +22,11 @@
     &__icon {  
         height: 2.5rem;
         width: 2.5rem;
+
+        @include respond(phone) {
+            height: 1.7rem;
+            width: 1.7rem;
+        }
     }
     
 }
@@ -31,7 +40,12 @@
 .tools__icon {
     height: 1.7rem;
     width: 1.7rem;
-    // box-shadow: .5rem .5rem .5rem #d1d1d1;
+
+    @include respond(phone) {
+        height: 1.4rem;
+        width: 1.4rem;
+    }
+    
 }
 
 

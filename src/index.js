@@ -51,7 +51,7 @@ ReactDOM.render(
 		this.carousel = $(config.carousel); //the carousel element
 		this.nextButton = $(config.nextButton); //the next button element
 		this.prevButton = $(config.prevButton); //the previous button element
-		this.chunkSize = config.chunkSize || 3; //how many items to show at a time (maximum)
+		this.chunkSize = config.chunkSize || 1; //how many items to show at a time (maximum)
 		this.shuffle = config.shuffle || false; //should the list be shuffled first? Default is false.
 		
 		//private variables
