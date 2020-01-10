@@ -1,39 +1,77 @@
+/*
+0 - 600 px:     Phone
+600 - 900 px:   Tablet portrait
+900 - 1200 px:  Tablet landscape
+[1200 - 1800 px] is where our normal styles apply
+1800+ px:       Big screens
+  1em = 16px
+*/
 .section-about {
   background-color: #eeeeee;
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   margin-bottom: 5rem;
   border-radius: 7px;
-  display: flex;
-  padding: 5rem; }
+  padding: 7rem; }
+  @media only screen and (max-width: 56.25em) {
+    .section-about {
+      padding: 4rem; } }
 
 .about {
   margin: auto;
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(2, max-content);
-  grid-column-gap: 5rem;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows: repeat(2, 50%);
+  grid-gap: 2rem;
   justify-items: center;
   align-items: center; }
+  @media only screen and (max-width: 56.25em) {
+    .about {
+      grid-row-gap: 8rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .about {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; } }
   .about__text {
+    display: block;
     text-indent: 1.4rem;
     font-size: 1.8rem;
     width: 25vw; }
+    @media only screen and (max-width: 37.5em) {
+      .about__text {
+        width: 100%; } }
+    .about__text.p-1 {
+      grid-column: 1 / span 1; }
+    .about__text.p-2 {
+      grid-column: 2 / span 1;
+      grid-row: 2 / span 1; }
+      @media only screen and (max-width: 75em) {
+        .about__text.p-2 {
+          margin-top: -7rem; } }
+
+.card-2 {
+  grid-row: 2 / span 1;
+  grid-column: 1 / span 1; }
 
 .project__card {
-  height: 100%;
-  width: 40vw;
+  height: 50vh;
+  width: 75vw;
   perspective: 100rem;
-  position: relative; }
+  position: relative;
+  align-self: start; }
   .project__card__side {
     backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
-    transition: all 1.5s;
-    border-radius: 10px;
-    overflow: hidden; }
+    transition: all 1.5s; }
+    @media only screen and (max-width: 37.5em) {
+      .project__card__side {
+        position: unset; } }
     .project__card__side--front {
       width: 100%;
       height: 100%;
@@ -45,8 +83,14 @@
       height: 100%;
       border-radius: 10px;
       overflow: hidden; }
+      @media only screen and (max-width: 56.25em) {
+        .project__card__side--back {
+          display: none; } }
   .project__card:hover .project__card__side--front {
     transform: rotateY(180deg); }
+    @media only screen and (max-width: 37.5em) {
+      .project__card:hover .project__card__side--front {
+        transform: rotateY(0deg); } }
   .project__card:hover .project__card__side--back {
     transform: rotateY(0deg); }
   .project__card--front-1 {
@@ -54,6 +98,12 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
+    @media only screen and (max-width: 75em) {
+      .project__card--front-1 {
+        margin-top: 7rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .project__card--front-1 {
+        margin-top: 4rem; } }
   .project__card--front-2 {
     background-image: url("../img/portfolio-21.jpg");
     background-size: contain;
@@ -71,6 +121,14 @@
     background-repeat: no-repeat;
     background-position: center; }
 
+/*
+0 - 600 px:     Phone
+600 - 900 px:   Tablet portrait
+900 - 1200 px:  Tablet landscape
+[1200 - 1800 px] is where our normal styles apply
+1800+ px:       Big screens
+  1em = 16px
+*/
 .section__header {
   background-color: #eeeeee;
   width: 100%;
@@ -85,26 +143,38 @@
   width: 100%;
   display: flex;
   align-items: center; }
+  @media only screen and (max-width: 56.25em) {
+    .header {
+      justify-content: space-evenly; } }
   .header__link {
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 3rem;
-    width: 7vw;
-    padding: 1rem;
+    height: 4rem;
+    width: 12vw;
+    padding: 2rem;
     border-radius: 1rem;
-    margin: 0 2rem 0 2rem;
+    margin: 0 5rem 0 5rem;
     border-bottom: 2px solid #c5c5c5;
     border-top: 1px solid transparent;
-    transition: all .6s; }
+    transition: all .6s;
+    flex-shrink: 0; }
   .header__link:link, .header__link:visited {
     color: black; }
-  .header__link:hover, .header__active {
+  .header__link:hover, .header__link:active {
     border-bottom: 2px solid #383838;
     border-top: 1px solid #c5c5c5;
     box-shadow: 0 1rem 1rem #9e9e9e; }
 
+/*
+0 - 600 px:     Phone
+600 - 900 px:   Tablet portrait
+900 - 1200 px:  Tablet landscape
+[1200 - 1800 px] is where our normal styles apply
+1800+ px:       Big screens
+  1em = 16px
+*/
 .weather {
   display: flex;
   justify-content: center;
@@ -114,6 +184,18 @@
   width: 100%;
   border-radius: 7px;
   overflow: hidden; }
+  @media only screen and (max-width: 37.5em) {
+    .weather {
+      height: 80vh; } }
+  @media only screen and (max-width: 56.25em) {
+    .weather {
+      font-size: 1.6rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .weather {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 30% 1fr;
+      justify-items: center; } }
   .weather__text {
     display: flex;
     width: 30%;
@@ -126,10 +208,23 @@
     text-align: center;
     height: 80%;
     border-radius: 7px; }
+    @media only screen and (max-width: 37.5em) {
+      .weather__text {
+        width: 80%;
+        height: 20%;
+        margin: 0;
+        padding: 3rem; } }
     .weather__text img {
       height: 10rem;
       width: 10rem;
       display: block; }
+      @media only screen and (max-width: 56.25em) {
+        .weather__text img {
+          height: 7rem;
+          width: 7rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .weather__text img {
+          display: none; } }
 
 .bg-video {
   height: 100%;
@@ -139,6 +234,11 @@
   align-self: stretch;
   border-radius: 7px;
   overflow: hidden; }
+  @media only screen and (max-width: 37.5em) {
+    .bg-video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; } }
   .bg-video__content {
     height: 100%;
     width: 100%;
@@ -224,7 +324,7 @@
 .portfolio {
   width: 100%;
   background-image: linear-gradient(#eeeeee 0%, #b4b4b4 25%, #6b6a6a 50%, #b4b4b4 75%, #eeeeee 100%);
-  height: 90vh;
+  height: 95vh;
   margin: 4rem 0 4rem 0;
   border-radius: 7px;
   overflow: hidden;
@@ -233,7 +333,6 @@
 .project__text {
   font-size: 1.8rem;
   color: #1d1d1d;
-  display: block;
   z-index: 100;
   background: transparent;
   grid-row: 2 / span 1;
@@ -250,6 +349,9 @@
   grid-template-columns: 10rem 1fr 10rem;
   grid-template-rows: 22% 78%;
   align-items: start; }
+  @media only screen and (max-width: 75em) {
+    .projects__gallery {
+      grid-template-rows: 1fr; } }
 
 .projects__list {
   text-align: center;
@@ -282,6 +384,10 @@
       box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.5);
       z-index: 10;
       transition: all 1s; }
+      @media only screen and (max-width: 75em) {
+        .projects__list__item:hover {
+          margin-top: -1rem;
+          transform: scale(1.05); } }
   .projects__list__photo {
     border: none;
     width: 100%;
@@ -298,6 +404,10 @@
   overflow: hidden;
   cursor: pointer;
   display: block; }
+  @media only screen and (max-width: 75em) {
+    .arrow {
+      width: 3.1rem;
+      height: 3.1rem; } }
   .arrow:hover {
     opacity: 1; }
   .arrow.next {
@@ -326,6 +436,9 @@
 
 .focused {
   transform: scale(1.3) translateY(3rem); }
+  @media only screen and (max-width: 75em) {
+    .focused {
+      transform: scale(1.1) translateY(1.5rem); } }
 
 .shrink {
   transform: scale(0.95); }
@@ -351,8 +464,6 @@
 .project-7 {
   background-image: linear-gradient(#f7dfa5, #8a0900) !important; }
 
-/* Creating the cradle below the thumbnails.
-	Uses % so that it grows with the image. */
 .footer {
   font-size: 1.2rem;
   color: #202020;
@@ -390,6 +501,14 @@
 .mailto__link:visited {
   color: #202020; }
 
+/*
+0 - 600 px:     Phone
+600 - 900 px:   Tablet portrait
+900 - 1200 px:  Tablet landscape
+[1200 - 1800 px] is where our normal styles apply
+1800+ px:       Big screens
+  1em = 16px
+*/
 *,
 *::after,
 *::before {
@@ -403,11 +522,33 @@ html {
   font-size: 62.5%;
   line-height: 1.7;
   background-color: #f8f8f8; }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   font-size: 1.8rem;
   width: 95vw;
-  padding: 4rem; }
+  padding: 5rem;
+  margin: 5rem; }
+  @media only screen and (max-width: 75em) {
+    body {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      font-size: 1.6rem;
+      padding: 0;
+      margin: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    body {
+      font-size: 1.5rem;
+      margin: .5rem; } }
 
 .overall {
   display: flex;

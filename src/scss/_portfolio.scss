@@ -1,7 +1,7 @@
 .portfolio {
 	width: 100%;
 	background-image: linear-gradient(#eeeeee 0%, #b4b4b4 25%, #6b6a6a 50%, #b4b4b4 75%, #eeeeee 100%);
-	height: 90vh;
+	height: 95vh;
     margin: 4rem 0 4rem 0;
 	border-radius: 7px;
 	overflow: hidden;
@@ -12,7 +12,6 @@
 .project__text {
 	font-size: 1.8rem;
 	color: #1d1d1d;
-	display: block;
 	z-index: 100;
 	background: transparent;
 	grid-row: 2 / span 1;
@@ -31,6 +30,10 @@
 	grid-template-columns: 10rem 1fr 10rem;
 	grid-template-rows: 22% 78%;
 	align-items: start;
+
+	@include respond(tab-land) {
+		grid-template-rows: 1fr;
+	}
 }
 
 
@@ -43,6 +46,7 @@
 
 	grid-column: 2 / span 1;
 	grid-row: 2 / span 1;
+	
 
 	display: grid;
 	grid-template-columns:  repeat(3, 1fr);
@@ -74,6 +78,11 @@
 			box-shadow: 0 2rem 5rem rgba(#000, .5);
 			z-index: 10;
 			transition: all 1s;
+
+			@include respond(tab-land) {
+				margin-top: -1rem;
+				transform: scale(1.05);
+			}
 	
 		}
 	}
@@ -97,14 +106,12 @@
 	overflow: hidden;
 	cursor: pointer;
 	display: block;
-	
-	// display:none;
-	// position:absolute;
-	// top:50%;
-	// left:10%;
-	// margin-left:-428px;
-	// margin-top:25px;
 
+	@include respond(tab-land) {
+		width: 3.1rem;
+		height: 3.1rem;
+	}
+	
 
 	&:hover {
 		opacity:1;
@@ -115,6 +122,7 @@
 		position:absolute;
 		bottom:47%;
 		right: 3%;
+	
 	}
 
 	&.prev {
@@ -145,6 +153,10 @@
 
 .focused {
 	transform: scale(1.3) translateY(3rem);
+
+	@include respond(tab-land) {
+		transform: scale(1.1) translateY(1.5rem);
+	}
 	
 }
 
@@ -186,27 +198,6 @@
 	background-image: linear-gradient( #f7dfa5, #8a0900) !important;
 }
 
-
-
-
-
-/* Creating the cradle below the thumbnails.
-	Uses % so that it grows with the image. */
-	
-// .projects__list__item::after{
-// 	content:'';
-// 	background:url('../img/cradle.png') no-repeat top center;
-// 	background-size:contain;
-// 	top: 150%;
-//     content: "";
-//     height: 100px;
-//     left: -5%;
-//     position: absolute;
-//     right: -5%;
-//     width: 40rem;
-// 	z-index: 5;
-// 	margin-top: 2rem;
-// }
 
 
 
