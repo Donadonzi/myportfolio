@@ -397,6 +397,9 @@
     position: relative;
     box-shadow: 0 0.5rem 3rem rgba(0, 0, 0, 0.3);
     transition: all 1s; }
+    @media only screen and (max-width: 37.5em) {
+      .projects__list__item {
+        width: 100%; } }
     .projects__list__item:hover {
       margin-top: -5rem;
       transform: scale(1.3);

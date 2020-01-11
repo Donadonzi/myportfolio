@@ -90,6 +90,10 @@
 		box-shadow: 0 .5rem 3rem rgba(#000, .3);
 		transition: all 1s;
 
+		@include respond(phone) {
+			width: 100%;
+		}
+
 		&:hover {
 			margin-top: -5rem;
 			transform: scale(1.3);
