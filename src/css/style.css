@@ -104,7 +104,7 @@
     @media only screen and (max-width: 37.5em) {
       .project__card--front-1 {
         margin-top: 1rem;
-        margin-bottom: 1rem; } }
+        margin-bottom: 2rem; } }
   .project__card--front-2 {
     background-image: url("../img/portfolio-21.jpg");
     background-size: contain;
@@ -490,13 +490,13 @@
   padding: 1.5rem;
   border-radius: 7px;
   display: flex;
-  justify-content: space-evenly; }
+  justify-content: space-evenly;
+  align-items: center; }
   @media only screen and (max-width: 37.5em) {
     .footer {
       height: 20vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      grid-template-rows: 1fr;
       justify-items: center;
       align-items: center; } }
   .footer__links:visited, .footer__links:active, .footer__links:link {
@@ -527,7 +527,8 @@
   @media only screen and (max-width: 37.5em) {
     .tools__icon {
       height: 1.4rem;
-      width: 1.4rem; } }
+      width: 1.4rem;
+      margin-top: .5rem; } }
 
 .mailto__link {
   text-decoration: none;
