@@ -484,7 +484,7 @@
   font-size: 1.2rem;
   color: #202020;
   background-color: #eeeeee;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   height: 15vh;
   width: 100%;
   padding: 1.5rem;
@@ -501,10 +501,6 @@
       align-items: center; } }
   .footer__links:visited, .footer__links:active, .footer__links:link {
     display: block; }
-    @media only screen and (max-width: 37.5em) {
-      .footer__links:visited, .footer__links:active, .footer__links:link {
-        grid-column: 2 / span 1;
-        grid-row: 1 / span 1; } }
   .footer__icon {
     height: 2.5rem;
     width: 2.5rem; }
@@ -538,8 +534,16 @@
   align-items: center; }
 
 .mailto__link:link,
-.mailto__link:visited {
+.mailto__link:visited,
+.mailto__link:active {
   color: #202020; }
+
+.footer__links {
+  display: block; }
+  @media only screen and (max-width: 37.5em) {
+    .footer__links {
+      grid-column: 2 / span 1;
+      margin-bottom: 1rem; } }
 
 /*
 0 - 600 px:     Phone

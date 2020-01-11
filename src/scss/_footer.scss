@@ -2,7 +2,7 @@
     font-size: 1.2rem;
     color: #202020;
     background-color: #eeeeee;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     height: 15vh;
     width: 100%;
     padding: 1.5rem;
@@ -15,7 +15,7 @@
         height: 20vh;
         display: grid;
         grid-template-columns: 1fr 1fr;
-        // grid-template-rows: 1fr;
+        // grid-template-rows: 100%;
         justify-items: center;
         align-items: center;
     }
@@ -24,11 +24,7 @@
     &__links:active,
     &__links:link {    
         display: block;
-
-        @include respond(phone) {
-            grid-column: 2 / span 1;
-            grid-row: 1 / span 1;
-        }
+    
     }
 
     &__icon {  
@@ -50,6 +46,7 @@
 
     @include respond(phone) {
         grid-column: 1 / span 1;
+        
     }
 }
 
@@ -76,7 +73,17 @@
 }
 
 .mailto__link:link,
-.mailto__link:visited {
+.mailto__link:visited,
+.mailto__link:active {
     color: #202020;
+}
+
+.footer__links {
+    display: block;
+
+    @include respond(phone) {
+        grid-column: 2 / span 1;
+        margin-bottom: 1rem;
+    }
 }
 
