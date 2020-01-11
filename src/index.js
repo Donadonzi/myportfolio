@@ -37,11 +37,17 @@ ReactDOM.render(
 			carousel: '#carousel',
 			nextButton: '.arrow.next',
 			prevButton: '.arrow.prev',
-			shuffle: false
-			// chunckSize: 3
+			shuffle: false,
+			chunkSize: window.matchMedia('(max-width: 600px)').matches ? 1 : 3
 		});
 		
-		navigator.init();		
+		navigator.init();	
+		
+		// if (window.matchMedia('(max-width: 700px)').matches) {
+		// 	navigator.chunckSize = 1;
+		// } else {
+		// 	navigator.chunckSize = 3;
+		// }
 		
 	});
 	
@@ -52,8 +58,8 @@ ReactDOM.render(
 		this.carousel = $(config.carousel); //the carousel element
 		this.nextButton = $(config.nextButton); //the next button element
 		this.prevButton = $(config.prevButton); //the previous button element
-		// this.chunkSize = $(config.chunkSize); //how many items to show at a time (maximum)
-		this.chunckSize = config.chunkSize || 3;
+		this.chunkSize = config.chunkSize || 3; //how many items to show at a time (maximum)
+		// this.chunkSize = 1;
 		this.shuffle = config.shuffle || false; //should the list be shuffled first? Default is false.
 		
 		//private variables
@@ -74,12 +80,15 @@ ReactDOM.render(
 
 			// if (window.matchMedia('(max-width: 600px)').matches) {
 			// 	this.chunckSize = 1;
+			// } else {
+			// 	this.chunckSize =3;
 			// }
 
 			//Shuffle the array if neccessary
 			if (this.shuffle) {
 				//remove visible tags
 				this._items.removeClass('visible');
+				this._texts.removeClass('visible');
 				
 				
 				//shuffle list
@@ -87,6 +96,7 @@ ReactDOM.render(
 				
 				//add visible class to first "chunkSize" items
 				this._items.slice(0, this.chunkSize).addClass('visible');
+				this._texts.slice(0, this.chunkSize).addClass('visible');
 			}
 			
 			//split array of items into chunks
@@ -229,6 +239,11 @@ ReactDOM.render(
 			return splitItems;
 		
 		};
+
+		
+
+
+
 
 	}
 
