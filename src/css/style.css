@@ -515,7 +515,8 @@
   align-items: center; }
   @media only screen and (max-width: 37.5em) {
     .footer__text {
-      grid-column: 1 / span 1; } }
+      grid-column: 1 / span 1;
+      grid-row: 2; } }
 
 .tools__icon {
   height: 1.7rem;
