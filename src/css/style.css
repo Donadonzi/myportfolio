@@ -35,7 +35,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center; } }
+      justify-content: center;
+      padding: 2rem; } }
   .about__text {
     display: block;
     text-indent: 1.4rem;
