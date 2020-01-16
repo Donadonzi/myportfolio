@@ -170,7 +170,8 @@
     flex-shrink: 0; }
     @media only screen and (max-width: 37.5em) {
       .header__link {
-        width: 24vw; } }
+        width: 24vw;
+        font-size: 1.4rem; } }
   .header__link:link, .header__link:visited {
     color: black; }
   .header__link:hover, .header__link:active {
