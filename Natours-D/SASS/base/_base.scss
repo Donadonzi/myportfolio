@@ -1,0 +1,46 @@
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit; // Box sizing is not inherited by default. So we force it.
+}
+
+html {
+    /* This defines what 1rem is */
+    font-size: 62.5%; /* This is for the cases that the user changes the default browser's font-size
+     (which is 16). So if we wanna have 10px when it's set to 16px, 
+     it means 62.5% of that. And if they reset the value,
+      all the other meseurements will be done based on that.
+      1rem = 10px; 10/16 = 62.5% */
+    // @include respond(phone) {
+    //     font-size: 50%;
+    // } We don't need this one. Cuz the next one covers this too.
+
+    @include respond(tab-land) { 
+        font-size: 56.25%; // 1rem = 9px; 9/16 = 56.25%
+    }  
+    // Order is important! Always the larger ones before the smaller ones.
+    @include respond(tab-port) {
+        font-size: 50%; // 1rem = 8px; 8/16 = 50%
+    }
+    
+    @include respond(big-desktop) {
+        font-size: 75%; // 1rem = 12px
+    }
+}
+
+body {
+     box-sizing: border-box;
+     padding: 3rem;
+
+     @include respond(tab-port) {
+        padding: 0;
+    }
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
