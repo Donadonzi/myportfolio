@@ -20,6 +20,8 @@ html {
     font-size: 62.5%;
     line-height: 1.7;
     background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
 
     @include respond(tab-port) {
         font-size: 50%; 
