@@ -47,7 +47,11 @@
         
         &.p-1 {
             // align-self: start;
-            grid-column: 1 / span 1;  
+            grid-column: 1 / span 1;
+
+            @include respond(phone) {
+                margin-top: 2rem;
+            }
         }
 
         &.p-2 {
@@ -75,11 +79,12 @@
     width: 75vw;
     perspective: 100rem;
     position: relative;
-    align-self: start;
-    // display: block;
+    align-self: center;
+    
     
     @include respond(phone) {
-        width: 80vw;
+        width: 90%;
+        perspective: none;
        
     }
     
@@ -91,18 +96,7 @@
         left: 0;
         transition: all 1.5s;
         
-        // width: 100%;
-        // @include respond(phone){
-        //     position: unset;
-        // }
-            
-        // @include respond(tab-port) {
-        //     position: unset;
-        //     top:50%;
-        //     left: 50%;
-        // }
-    
-       
+           
         
         &--front {
             width: 100%;
@@ -150,8 +144,8 @@
         }
 
         @include respond(phone) {
-            margin-top: 1rem;
-            margin-bottom: 2rem;
+            margin-top: 2rem;
+            // margin-bottom: 2rem;
         }
        
     }

@@ -46,6 +46,9 @@
         width: 100%; } }
     .about__text.p-1 {
       grid-column: 1 / span 1; }
+      @media only screen and (max-width: 37.5em) {
+        .about__text.p-1 {
+          margin-top: 2rem; } }
     .about__text.p-2 {
       grid-column: 2 / span 1;
       grid-row: 2 / span 1; }
@@ -65,10 +68,11 @@
   width: 75vw;
   perspective: 100rem;
   position: relative;
-  align-self: start; }
+  align-self: center; }
   @media only screen and (max-width: 37.5em) {
     .project__card {
-      width: 80vw; } }
+      width: 90%;
+      perspective: none; } }
   .project__card__side {
     backface-visibility: hidden;
     position: absolute;
@@ -106,8 +110,7 @@
         margin-top: 7rem; } }
     @media only screen and (max-width: 37.5em) {
       .project__card--front-1 {
-        margin-top: 1rem;
-        margin-bottom: 2rem; } }
+        margin-top: 2rem; } }
   .project__card--front-2 {
     background-image: url("../img/portfolio-21.jpg");
     background-size: contain;
@@ -367,7 +370,7 @@
   @media only screen and (max-width: 37.5em) {
     .projects__gallery {
       grid-template-columns: 5rem 1fr 5rem;
-      grid-template-rows: 22% 78%; } }
+      grid-template-rows: 10% 1fr; } }
 
 .projects__list {
   text-align: center;
@@ -605,7 +608,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 90vw; }
+  width: 100%; }
 
 .spinner {
   font-size: 1.7rem;
