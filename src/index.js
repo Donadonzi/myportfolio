@@ -42,12 +42,7 @@ ReactDOM.render(
 		});
 		
 		navigator.init();	
-		
-		// if (window.matchMedia('(max-width: 700px)').matches) {
-		// 	navigator.chunckSize = 1;
-		// } else {
-		// 	navigator.chunckSize = 3;
-		// }
+		console.log('kooft');
 		
 	});
 	
@@ -71,33 +66,20 @@ ReactDOM.render(
 		
 
 		this.init = function () {
-			// var mq = window.matchMedia( "(max-width: 600px)" );
-			// if (mq.matches) {
-			// 	this.chunckSize = 1;
-			// } else {
-			// 	this.chunckSize = 3;
-			// }
-
-			// if (window.matchMedia('(max-width: 600px)').matches) {
-			// 	this.chunckSize = 1;
-			// } else {
-			// 	this.chunckSize =3;
-			// }
+			
+			//remove visible tags
+			this._items.removeClass('visible');
+			this._texts.removeClass('visible');
 
 			//Shuffle the array if neccessary
-			if (this.shuffle) {
-				//remove visible tags
-				this._items.removeClass('visible');
-				this._texts.removeClass('visible');
-				
-				
+			if (this.shuffle) {					
 				//shuffle list
 				this._items.sort(function() { return 0.5 - Math.random() });
-				
-				//add visible class to first "chunkSize" items
-				this._items.slice(0, this.chunkSize).addClass('visible');
-				this._texts.slice(0, this.chunkSize).addClass('visible');
 			}
+
+			//add visible class to first "chunkSize" items
+			this._items.slice(0, this.chunkSize).addClass('visible');
+			this._texts.slice(0, this.chunkSize).addClass('visible');
 			
 			//split array of items into chunks
 			this._chunks = this._splitItems(this._items, this.chunkSize);
