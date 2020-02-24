@@ -169,22 +169,21 @@
     align-items: center;
     justify-content: center;
     height: 4rem;
-    width: 8vw;
+    width: 20rem;
     border-radius: 1rem;
     transition: all .5s;
     position: relative; }
     .header__link::before {
       content: "";
       height: 100%;
-      width: .1rem;
+      width: 1rem;
       opacity: 0;
       background-color: white;
       position: absolute;
-      left: 55%;
+      left: 50%;
       top: 0;
       transition: all .4s;
-      overflow: hidden;
-      border-radius: 1rem; }
+      overflow: hidden; }
     @media only screen and (max-width: 37.5em) {
       .header__link {
         width: 24vw;
@@ -194,11 +193,10 @@
   .header__link:hover, .header__link:active {
     color: black; }
     .header__link:hover::before, .header__link:active::before {
-      transform: scaleX(140);
+      transform: scaleX(20);
       transform-origin: center;
       z-index: -1;
-      opacity: 1;
-      border-radius: .1rem; }
+      opacity: 1; }
 
 /*
 0 - 600 px:     Phone
@@ -309,7 +307,7 @@
     object-fit: cover; }
 
 .weather--ClearDay {
-  background-color: rgba(151, 186, 252, 0.7);
+  background-color: rgba(151, 186, 252, 0.5);
   border-radius: 7px;
   overflow: hidden; }
   .weather--ClearDay p {
@@ -317,7 +315,7 @@
     background-color: #a0dff8; }
 
 .weather--RainyDay {
-  background-color: rgba(96, 115, 139, 0.7);
+  background-color: rgba(96, 115, 139, 0.5);
   border-radius: 7px;
   overflow: hidden; }
   .weather--RainyDay p {
@@ -325,7 +323,7 @@
     background-color: #445f81; }
 
 .weather--SnowyDay {
-  background-color: rgba(71, 83, 77, 0.7);
+  background-color: rgba(71, 83, 77, 0.5);
   border-radius: 7px;
   overflow: hidden; }
   .weather--SnowyDay p {
@@ -333,7 +331,7 @@
     background-color: #839b8f; }
 
 .weather--GreySky {
-  background-color: rgba(165, 158, 137, 0.7);
+  background-color: rgba(199, 188, 156, 0.3);
   border-radius: 7px;
   overflow: hidden; }
   .weather--GreySky p {
@@ -341,7 +339,7 @@
     background-color: #645f51; }
 
 .weather--ClearNight {
-  background-color: rgba(35, 39, 46, 0.7);
+  background-color: rgba(35, 39, 46, 0.5);
   border-radius: 7px;
   overflow: hidden; }
   .weather--ClearNight p {
@@ -349,7 +347,7 @@
     background-color: #2f455a; }
 
 .weather--RainyNight {
-  background-color: rgba(85, 20, 20, 0.7);
+  background-color: rgba(85, 20, 20, 0.5);
   border-radius: 7px;
   overflow: hidden; }
   .weather--RainyNight p {
@@ -357,7 +355,7 @@
     background-color: #250000; }
 
 .weather--SnowyNight {
-  background-color: rgba(14, 26, 49, 0.7);
+  background-color: rgba(14, 26, 49, 0.5);
   border-radius: 7px;
   overflow: hidden; }
   .weather--SnowyNight p {

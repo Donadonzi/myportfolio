@@ -135,7 +135,7 @@
 }
 
 .weather--ClearDay {
-    background-color: rgba(151, 186, 252, 0.7);
+    background-color: rgba(151, 186, 252, 0.5);
     // border: 3px solid #1c85db;
     border-radius: 7px;
     overflow: hidden;
@@ -151,7 +151,7 @@
 }
 
 .weather--RainyDay {
-    background-color: rgba(96, 115, 139, 0.7);
+    background-color: rgba(96, 115, 139, 0.5);
     // border: 3px solid #023477;
     border-radius: 7px;
     overflow: hidden;
@@ -166,7 +166,7 @@
 }
 
 .weather--SnowyDay {
-    background-color: rgba(71, 83, 77, 0.7);
+    background-color: rgba(71, 83, 77, 0.5);
     // border: 3px solid #3f4b3c;
     border-radius: 7px;
     overflow: hidden;
@@ -181,7 +181,7 @@
 }
 
 .weather--GreySky {
-    background-color: rgba(165, 158, 137, 0.7);
+    background-color: rgba(199, 188, 156, 0.3);
     // border: 3px solid #47443b;
     border-radius: 7px;
     overflow: hidden;
@@ -196,7 +196,7 @@
 }
 
 .weather--ClearNight {
-    background-color: rgba(35, 39, 46, 0.7);
+    background-color: rgba(35, 39, 46, 0.5);
     // border: 3px solid #373e47;
     border-radius: 7px;
     overflow: hidden;
@@ -211,7 +211,7 @@
 }
 
 .weather--RainyNight {
-    background-color: rgba(85, 20, 20, 0.7);
+    background-color: rgba(85, 20, 20, 0.5);
     // border: 3px solid #8a7979;
     border-radius: 7px;
     overflow: hidden;
@@ -226,7 +226,7 @@
 }
 
 .weather--SnowyNight {
-    background-color: rgba(14, 26, 49, 0.7);
+    background-color: rgba(14, 26, 49, 0.5);
     // border: 3px solid #a2c4f7;
     border-radius: 7px;
     overflow: hidden;
