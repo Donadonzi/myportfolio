@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/style.css';
 import Current from './components/Current';
+import SimpleMenu from './components/Language';
 // import Loader from './components/Loader';
 // import  usePromiseTracker  from 'react-promise-tracker';
 
@@ -13,6 +14,10 @@ ReactDOM.render(
 	document.getElementById('weather')
 );
 
+ReactDOM.render(
+	<SimpleMenu />,
+	document.querySelector('.header__menu-lang')
+);
 
 
 // ReactDOM.render(

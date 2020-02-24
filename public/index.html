@@ -10,23 +10,31 @@
       content="Web site created using create-react-app"
     />
     
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <link rel="style sheet" href="../src/css/style.css" />
     
-     
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+    <link rel="style sheet" href="../src/css/style.css" />
+
     <title>DonZ Portfolio</title>
   </head>
 
   <body>
 
+    <div class="overall__bg__video">
+      <video type="video/mp4" autoplay muted loop>
+        <source  src="img/Earth_B-compressed.mp4">
+          Video not supported!
+        </video>
+    </div>  
+    
     <div class="overall">
-
       <section class="section__header">
-
         <div class="header">
-          <a href="#section-about" class="header__link">About</a>
+          <a href="#section-about" class="header__link">About Me</a>
           <a href="#section-portfolio" class="header__link">Portfolio</a>
+          <a href="#footer" class="header__link header__link__contact">Contact Me</a>
+        </div>
+        <div class="header__menu-lang">
+          &nbsp;
         </div>
 
       </section>
@@ -155,7 +163,6 @@
       </section>
 
       <section class="section-about" id="section-about">
-
         <div class="about">
 
           <p class="about__text p-1">
@@ -168,22 +175,18 @@
           <div class="project__card">
             <div class="project__card__side project__card__side--front project__card--front-1 ">
               &nbsp;
-          
-            </div>
-            <div class="project__card__side project__card__side--back project__card--back-1 ">
-          
-              &nbsp;
-          
-            </div>
           </div>
+          <div class="project__card__side project__card__side--back project__card--back-1 ">
+            &nbsp;
+          </div>
+        </div>
           
           <p class="about__text p-2">
             Not that I didn't love that, but recently I have been missing coding and my good old
             friend, software development and everything. So I'm getting back in the game catching up with all the new and
             exciting tools which make coding more fun. I was just thinking to myself the other day that, successfully
             coding makes me feel powerful!
-          </p>
-          
+          </p> 
           <div class="project__card card-2">
             <div class="project__card__side project__card__side--front project__card--front-2 ">
               &nbsp;
@@ -197,15 +200,13 @@
       </section>
   
       
-      <footer class="footer">
-        <div class="footer__text">
-          
+      <footer class="footer" id="footer">
+        <div class="footer__text">     
           <p>
             Built by Donya Teymourifar &copy; 2020
           </p>
-          
-          <div class="tools__icons">
-            
+
+          <div class="tools__icons">  
             <svg class="tools__icon">
               <use xlink:href="./img/sprite.svg#icon-react"></use>
             </svg>
@@ -220,8 +221,7 @@
             
             <svg class="tools__icon">
               <use xlink:href="./img/sprite.svg#icon-html5"></use>
-            </svg>
-            
+            </svg>  
           </div>    
         </div>
         
@@ -253,11 +253,12 @@
         </div>
         
       </footer>
-    </div>
-
+    </div> <!--overall-->
+    
     <script src="../src/index.js"></script>
     <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
   </body>
-  
+
 </html>

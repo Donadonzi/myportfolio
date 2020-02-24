@@ -19,9 +19,11 @@ html {
     font-weight: 400;
     font-size: 62.5%;
     line-height: 1.7;
-    background-color: #f8f8f8;
     display: flex;
     justify-content: center;
+    background-color: #02060a;
+    z-index: 1;
+    
     
 
     @include respond(tab-port) {
@@ -38,11 +40,13 @@ html {
 
 }
 
+
 body {
     font-size: 1.8rem;
-    width: 90vw;
+    width: 100vw;
     padding: 5rem;
     margin:5rem 5vw 5rem 5vw;
+    
 
     @include respond(tab-land) { 
         font-size: 56.25%; 
@@ -56,12 +60,37 @@ body {
     }
     
     
-
     @include respond(phone) { 
         font-size: 43%;
        
     } 
     
+    
+}
+
+.overall__bg__video {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    z-index: -10;
+    filter: brightness(.3);
+    overflow: hidden;
+
+    @include respond(tab-port) {
+        display: none;
+    }
+
+    & > video {
+        display: block;
+        position: fixed;
+        object-fit: contain;
+        width: 100vw;
+        height: 100vh;
+    }
     
 }
 
@@ -71,7 +100,9 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 90vw;
+    z-index: 10;
+    
 }
 
 .spinner {

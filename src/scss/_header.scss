@@ -1,7 +1,7 @@
 @import "mixins";
 
 .section__header {
-    background-color: #eeeeee;
+    // background-color: rgba(238, 238, 238, 0.5);
     width: 100%;
     height: 7rem;
     margin-bottom: 4rem;
@@ -10,7 +10,10 @@
     align-items: center;
     padding-left: 3rem;
     
+    
 }
+
+
 
  .header {
     width: 100%;
@@ -18,23 +21,49 @@
     align-items: center;
 
     @include respond(tab-port) {     
-        justify-content: space-evenly; 
-    } 
+        justify-content: flex-start; 
+    }
+    
+    &__menu-lang {
+        font-size: inherit;
+        margin-right: 5rem;
+        font-size: 3rem;
+        
+    }
 
     &__link {
         text-decoration: none;
+        font-weight: 700;
         display: flex;
         align-items: center;
         justify-content: center;
         height: 4rem;
-        width: 12vw;
-        padding: 2rem;
+        width: 8vw;
         border-radius: 1rem;
-        margin: 0 5rem 0 5rem;
-        border-bottom: 2px solid #c5c5c5;
-        border-top: 1px solid transparent;
-        transition: all .6s;
-        flex-shrink: 0;
+        // border: 1px solid transparent;
+        transition: all .5s;
+        position: relative;
+        
+        
+        &::before {
+            content: "";
+            height: 100%;
+            width: .1rem;
+            opacity: 0;
+            background-color: white;
+            position: absolute;
+            left: 55%;
+            top: 0;
+            transition: all .4s;
+            overflow: hidden;
+            border-radius: 1rem;
+                        
+        }
+        
+
+        &__contact {
+           
+        }
 
         @include respond(phone) {
             width: 24vw;
@@ -46,13 +75,21 @@
 
     &__link:link,
     &__link:visited {
-        color: black;
+        color: white;
     }
 
     &__link:hover,
     &__link:active {
-        border-bottom: 2px solid #383838;
-        border-top: 1px solid #c5c5c5;
-        box-shadow: 0 1rem 1rem #9e9e9e;
+        color: black;
+        
+        &::before {
+            transform: scaleX(135);
+            transform-origin: center;
+            z-index: -1;
+            opacity: 1;
+            border-radius: .1rem;
+                        
+        }
     }
 }
+
