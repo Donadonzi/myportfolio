@@ -14,10 +14,12 @@ ReactDOM.render(
 	document.getElementById('weather')
 );
 
+/* --- Language menu ---
 ReactDOM.render(
 	<SimpleMenu />,
 	document.querySelector('.header__menu-lang')
 );
+*/
 
 
 // ReactDOM.render(

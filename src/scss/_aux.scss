@@ -1,0 +1,331 @@
+@import "mixins";
+
+.aux {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+// =========== ANIMATION ============== //
+.animate span {
+    display: inline-block;
+}
+
+.animate span:nth-of-type(2) {
+    animation-delay: .05s;
+}
+.animate span:nth-of-type(3) {
+    animation-delay: .1s;
+}
+.animate span:nth-of-type(4) {
+    animation-delay: .15s;
+}
+.animate span:nth-of-type(5) {
+    animation-delay: .2s;
+}
+.animate span:nth-of-type(6) {
+    animation-delay: .25s;
+}
+.animate span:nth-of-type(7) {
+    animation-delay: .3s;
+}
+.animate span:nth-of-type(8) {
+    animation-delay: .35s;
+}
+.animate span:nth-of-type(9) {
+    animation-delay: .4s;
+}
+.animate span:nth-of-type(10) {
+    animation-delay: .45s;
+}
+.animate span:nth-of-type(11) {
+    animation-delay: .5s;
+}
+.animate span:nth-of-type(12) {
+    animation-delay: .55s;
+}
+.animate span:nth-of-type(13) {
+    animation-delay: .6s;
+}
+.animate span:nth-of-type(14) {
+    animation-delay: .65s;
+}
+.animate span:nth-of-type(15) {
+    animation-delay: .7s;
+}
+.animate span:nth-of-type(16) {
+    animation-delay: .75s;
+}
+.animate span:nth-of-type(17) {
+    animation-delay: .8s;
+}
+.animate span:nth-of-type(18) {
+    animation-delay: .85s;
+}
+.animate span:nth-of-type(19) {
+    animation-delay: .9s;
+}
+.animate span:nth-of-type(20) {
+    animation-delay: .95s;
+}
+
+.four span {
+    opacity: 0;
+    transform: translate(0, -100px) rotate(360deg) scale(0);
+    animation: revolveDrop 3s forwards infinite;
+}
+
+@keyframes revolveDrop {
+    30% {
+        transform: translate(0, 0) rotate(180deg) scale(1);
+    }
+
+    60% {
+        transform: translate(0, 0) scale(.8) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0) scale(1) rotate(0deg);
+        opacity: 1;
+    }
+}
+// =========== END OF ANIMATION===========//
+
+.to-be {
+    width: 40%;
+    height: 50vh;
+    border: 1px solid rgba(255, 255, 255, 0.30);
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+
+    @include respond(phone) {
+        display: none;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        opacity: .2;
+    }
+
+    &__text {
+        position: absolute;
+        top: 4rem;
+        left: 4rem;
+        color: black;
+        font-size: 2.5rem;
+    }
+}
+
+// This is the whole container for both video and text
+#weather {
+    margin-left: auto;
+}
+
+.weather {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    height: 50vh;
+    width: 50vw;
+    border-radius: 7px;
+    overflow: hidden;
+    
+    
+
+    @include respond(phone) {
+        height: 80vh;
+        width: 90vw;
+
+    }
+
+
+    @include respond(tab-port) {
+        font-size: 1.6rem;
+    }
+
+    @include respond(phone) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 30% 1fr;
+        justify-items: center;
+    }
+    
+        &__text {
+        display: flex;
+        width: 30%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 7rem;
+        margin-left: 7rem;
+        padding: 6rem 4rem 4rem 4rem; 
+        text-align: center;
+        height: 80%;
+        border-radius: 7px;
+
+        @include respond(phone) {
+            width: 80%;
+            height: 20%;
+            margin: 0;
+            padding: 3rem;
+        }
+
+        img {
+            height: 8rem;
+            width: 8rem;
+            display: block;
+
+            @include respond(tab-port) {
+                height: 7rem;
+                width: 7rem;   
+            }
+            @include respond(phone) {
+                display: none;
+            }
+            
+        } 
+
+    }
+}
+
+
+.bg-video {
+     
+    height: 100%;
+    margin-left: auto;
+    width: 70%;
+    object-fit: cover;
+    align-self: stretch;
+    border-radius: 7px;
+    overflow: hidden;
+
+    @include respond(phone) {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__content {
+        
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+  
+    }
+
+}
+
+.weather--ClearDay {
+    background-color: rgba(151, 186, 252, 0.7);
+    // border: 3px solid #1c85db;
+    border-radius: 7px;
+    overflow: hidden;
+
+    & p {
+        color: #356397;
+        background-color: #a0dff8;
+    }
+
+    & .bg-video {
+        // border: 2px solid #284964;
+    }
+}
+
+.weather--RainyDay {
+    background-color: rgba(96, 115, 139, 0.7);
+    // border: 3px solid #023477;
+    border-radius: 7px;
+    overflow: hidden;
+    & p {
+        color: #f1f1f1;
+        background-color: #445f81;
+    }
+
+    & .bg-video {
+        // border: 2px solid #577daf;
+    }
+}
+
+.weather--SnowyDay {
+    background-color: rgba(71, 83, 77, 0.7);
+    // border: 3px solid #3f4b3c;
+    border-radius: 7px;
+    overflow: hidden;
+    & p {
+        color: #e0eeea;
+        background-color: #839b8f;
+    }
+
+    & .bg-video {
+        // border: 2px solid #4d5849;
+    }
+}
+
+.weather--GreySky {
+    background-color: rgba(165, 158, 137, 0.7);
+    // border: 3px solid #47443b;
+    border-radius: 7px;
+    overflow: hidden;
+    & p {
+        color: #cfc7af;
+        background-color: #645f51;
+    }
+
+    & .bg-video {
+        // border: 2px solid #807a6a;
+    }
+}
+
+.weather--ClearNight {
+    background-color: rgba(35, 39, 46, 0.7);
+    // border: 3px solid #373e47;
+    border-radius: 7px;
+    overflow: hidden;
+    & p {
+        color: #b8b8b9;
+        background-color: #2f455a;
+    }
+
+    & .bg-video {
+        // border: 2px solid #5f6c7c;
+    }
+}
+
+.weather--RainyNight {
+    background-color: rgba(85, 20, 20, 0.7);
+    // border: 3px solid #8a7979;
+    border-radius: 7px;
+    overflow: hidden;
+    & p {
+        color: #b9b9b9;
+        background-color: #250000;
+    }
+
+    & .bg-video {
+        // border: 2px solid #5e5252;
+    }
+}
+
+.weather--SnowyNight {
+    background-color: rgba(14, 26, 49, 0.7);
+    // border: 3px solid #a2c4f7;
+    border-radius: 7px;
+    overflow: hidden;
+    
+    & p {
+        color: #f4f7fc;
+        background-color: #19317577;
+    }
+
+    & .bg-video {
+        // border: 2px solid #b4c5f5;
+    }
+}
+
+
+
+

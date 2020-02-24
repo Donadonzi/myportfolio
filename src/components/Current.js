@@ -1,5 +1,4 @@
 import React from 'react';
-// import ReactDOM from 'react-dom';
 import axios from 'axios';
 import VideoSelector from './VideoSelector';
 // import  trackPromise from 'react-promise-tracker';
