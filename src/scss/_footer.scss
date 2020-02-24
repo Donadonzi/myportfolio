@@ -32,6 +32,7 @@
     &__icon {  
         height: 2.5rem;
         width: 2.5rem;
+        
 
         @include respond(phone) {
             height: 1.7rem;
@@ -39,6 +40,11 @@
         }
     }
     
+}
+
+.gmail__icon {
+    backdrop-filter: brightness(2);
+    height: 2rem;
 }
 
 .footer__text {
