@@ -25,10 +25,14 @@ html {
     color: white;
     
     
-
+/* ============== NEEDS MORE WORK =================
     @include respond(tab-port) {
-        font-size: 50%; 
+        font-size: 50%;
+        background-image: url(../../src/img/pexels-bg.jpeg);
+        backdrop-filter: brightness(.7);
+        // position: fixed; 
     }
+==================*/
     
     @include respond(tab-land) { 
         font-size: 56.25%; 

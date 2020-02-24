@@ -6,10 +6,18 @@
 	border-radius: 7px;
 	overflow: hidden;
 	transition: all 1s;
+	position: relative;
 
 	// @include respond(phone) {
 	// 	// height: 50vh;
 	// }
+
+	&__header {
+		display: block;
+		position: absolute;
+		top: 5rem;
+		left: 5rem;
+	}
 }
 
 .project__text {

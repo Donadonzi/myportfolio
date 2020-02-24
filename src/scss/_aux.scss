@@ -135,14 +135,14 @@
 }
 
 .weather--ClearDay {
-    background-color: rgba(151, 186, 252, 0.5);
+    background-color: rgba(151, 186, 252, 0.3);
     // border: 3px solid #1c85db;
     border-radius: 7px;
     overflow: hidden;
 
     & p {
-        color: #356397;
-        background-color: #a0dff8;
+        color: #134781;
+        background-color: rgba(120, 173, 194, 0.7);
     }
 
     & .bg-video {
@@ -157,7 +157,7 @@
     overflow: hidden;
     & p {
         color: #f1f1f1;
-        background-color: #445f81;
+        background-color: rgba(68, 95, 129, 0.7);
     }
 
     & .bg-video {
@@ -172,7 +172,7 @@
     overflow: hidden;
     & p {
         color: #e0eeea;
-        background-color: #839b8f;
+        background-color: rgba(131, 155, 143, 0.7);
     }
 
     & .bg-video {
@@ -187,7 +187,7 @@
     overflow: hidden;
     & p {
         color: #cfc7af;
-        background-color: #645f51;
+        background-color: rgba(100, 95, 81, 0.7);
     }
 
     & .bg-video {
@@ -202,7 +202,7 @@
     overflow: hidden;
     & p {
         color: #b8b8b9;
-        background-color: #2f455a;
+        background-color: rgba(47, 69, 90, 0.7);
     }
 
     & .bg-video {
@@ -217,7 +217,7 @@
     overflow: hidden;
     & p {
         color: #b9b9b9;
-        background-color: #250000;
+        background-color: rgba(37, 0, 0, 0.7);
     }
 
     & .bg-video {
@@ -233,7 +233,7 @@
     
     & p {
         color: #f4f7fc;
-        background-color: #19317577;
+        background-color: rgba(25, 50, 117, 0.7);
     }
 
     & .bg-video {
