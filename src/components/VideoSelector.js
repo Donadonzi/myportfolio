@@ -11,7 +11,7 @@ import SnowyNight from '../videos/SnowyNight.mp4';
 const DayOrNight= () => {
     const hours = new Date().getHours();
     let time = '';
-    hours >= 6 && hours <= 17 ? time = 'day' : time = 'night';
+    hours >= 6 && hours <= 18 ? time = 'day' : time = 'night';
     return time;
 
 };
