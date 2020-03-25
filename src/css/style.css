@@ -451,6 +451,10 @@
     top: 5rem;
     left: 5rem; }
 
+.project__title {
+  font-size: 1.8rem;
+  text-align: center; }
+
 .project__text {
   font-size: 1.8rem;
   color: #1d1d1d;
