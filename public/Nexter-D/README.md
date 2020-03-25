@@ -1,5 +1,6 @@
 ### Nexter
 
-A prototype website for a fictional hotel. I built it through my advanced CSS/SASS course learning all about Flexbox. Only SCSS and HTML are used in this website.
+A prototype website for a fictional real estate company.
+I built it through my advanced CSS/SASS course. In its layout, CSS Grid is widely used.
 
-[Go to the website](https://www.donz.website/trillo-d)
+[Go to the website](https://www.donz.website/nexter-d)
