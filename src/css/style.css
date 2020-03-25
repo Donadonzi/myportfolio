@@ -453,7 +453,8 @@
 
 .project__title {
   font-size: 1.8rem;
-  text-align: center; }
+  text-align: center;
+  color: white !important; }
 
 .project__text {
   font-size: 1.8rem;
