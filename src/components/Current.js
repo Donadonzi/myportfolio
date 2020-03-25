@@ -57,7 +57,6 @@ class Current extends React.Component {
             );
 
             console.log('Received weather API response');
-            console.log(response);
 
             this.setState({
                 code: response.data.weather[0].id,

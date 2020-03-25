@@ -7,8 +7,6 @@ import SimpleMenu from './components/Language';
 // import  usePromiseTracker  from 'react-promise-tracker';
 
 
-
-
 ReactDOM.render(
 	<Current />,
 	document.getElementById('weather')
@@ -48,9 +46,7 @@ ReactDOM.render(
 			chunkSize: window.matchMedia('(max-width: 600px)').matches ? 1 : 3
 		});
 		
-		navigator.init();	
-		console.log('kooft');
-		
+		navigator.init();		
 	});
 	
 	
