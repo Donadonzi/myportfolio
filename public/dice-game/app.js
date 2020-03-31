@@ -25,7 +25,24 @@ document.querySelector('.btn-roll').addEventListener('click', function() {
             scores[activePlayer] = 0;
             document.querySelector('#score-' + activePlayer).textContent = '0';
             nextPlayer();
+				}
+				
+				/*
+        if (dice === 6 && previousDice === 6) {
+            //Player looses score
+            scores[activePlayer] = 0;
+            document.querySelector('#score-' + activePlayer).textContent = '0';
+            nextPlayer();
+        } else if (dice !== 1) {
+            //Add score
+            roundScore += dice;
+            document.querySelector('#current-' + activePlayer).textContent = roundScore;
+        } else {
+            //Next player
+            nextPlayer();
         }
+        previousDice = dice;
+        */
         
 
         //2. Display the result
