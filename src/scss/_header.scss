@@ -39,24 +39,22 @@
         justify-content: center;
         height: 4rem;
         width: 20rem;
-        border-radius: 1rem;
-        // border: 1px solid transparent;
-        transition: all .5s;
         position: relative;
         
         
         &::before {
             content: "";
             height: 100%;
-            width: 1rem;
+            width: 100%;
             opacity: 0;
             background-color: white;
             position: absolute;
-            left: 50%;
+            left: 0;
             top: 0;
             transition: all .4s;
-            overflow: hidden;
-            // border-radius: 1rem;
+						overflow: hidden;
+						transform: scaleX(0.0001);
+            border-radius: 5px;
                         
         }
         
@@ -83,12 +81,9 @@
         color: black;
         
         &::before {
-            transform: scaleX(20);
-            transform-origin: center;
+            transform: scaleX(1);
             z-index: -1;
-            opacity: 1;
-            // border-radius: .1rem;
-                        
+            opacity: 1;             
         }
     }
 }

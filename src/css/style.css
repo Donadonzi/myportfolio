@@ -170,20 +170,20 @@
     justify-content: center;
     height: 4rem;
     width: 20rem;
-    border-radius: 1rem;
-    transition: all .5s;
     position: relative; }
     .header__link::before {
       content: "";
       height: 100%;
-      width: 1rem;
+      width: 100%;
       opacity: 0;
       background-color: white;
       position: absolute;
-      left: 50%;
+      left: 0;
       top: 0;
       transition: all .4s;
-      overflow: hidden; }
+      overflow: hidden;
+      transform: scaleX(0.0001);
+      border-radius: 5px; }
     @media only screen and (max-width: 37.5em) {
       .header__link {
         width: 24vw;
@@ -193,8 +193,7 @@
   .header__link:hover, .header__link:active {
     color: black; }
     .header__link:hover::before, .header__link:active::before {
-      transform: scaleX(20);
-      transform-origin: center;
+      transform: scaleX(1);
       z-index: -1;
       opacity: 1; }
 
