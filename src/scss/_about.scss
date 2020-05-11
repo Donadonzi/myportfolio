@@ -39,7 +39,8 @@
     &__text {
         display: block;
         text-indent: 1.4rem;
-        font-size: 2rem;
+				font-size: 1.6rem;
+				line-height: 3rem;
         width: 25vw;
 
         @include respond(phone) {

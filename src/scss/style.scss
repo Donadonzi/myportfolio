@@ -5,6 +5,7 @@
 @import "portfolio";
 @import "footer";
 @import "mixins";
+@import "carousel";
 
 *,
 *::after,
@@ -23,8 +24,7 @@ html {
     justify-content: center;
     background-color: #0a131b;
     color: white;
-    
-    
+       
 /* ============== NEEDS MORE WORK =================
     @include respond(tab-port) {
         font-size: 50%;
@@ -41,9 +41,7 @@ html {
     @include respond(big-desktop) {
         font-size: 75%;
     }
-
 }
-
 
 body {
     font-size: 1.8rem;

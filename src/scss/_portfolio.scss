@@ -1,12 +1,14 @@
 .portfolio {
 	width: 100%;
 	background-image: linear-gradient(rgba(238, 238, 238, 0.3) 0%, rgba(180, 180, 180, 0.5) 25%, rgba(107, 106, 106, .5) 50%, rgba(180, 180, 180, .5) 75%, rgba(237, 237, 237, 0.3) 100%);
-	height: 95vh;
+	height: 100vh;
   margin: 4rem 0 4rem 0;
 	border-radius: 7px;
 	overflow: hidden;
 	transition: all 1s;
 	position: relative;
+	padding: 10rem 15rem 5rem 15rem;
+	
 
 	// @include respond(phone) {
 	// 	// height: 50vh;
@@ -17,157 +19,83 @@
 		position: absolute;
 		top: 5rem;
 		left: 5rem;
+		font-size: 3rem;
 	}
 
 }
 
-.project__title {
-  font-size: 1.8rem;
-  text-align: center;
-  color: white !important;
-}
-
-.project__text {
-	font-size: 1.8rem;
-	color: #1d1d1d;
-	// color: white;
-	z-index: 100;
-	background: transparent;
-	grid-row: 2 / span 1;
-	width: 75%;
-	transition: all 1s;	
-	display: none;
+.project {
+	color: white;
 	text-align: center;
-
-	// @include respond(phone) {
-	// 	width: 80%;
-  // }		
-}
-
-.projects__gallery {   
-	height: 100%;
-	position: relative;
-	transition: all 1s;
-	display: grid;
-	grid-template-columns: 10rem 1fr 10rem;
-	grid-template-rows: 22% 78%;
-	align-items: start;
-
-	@include respond(tab-land) {
-		grid-template-rows: 1fr;
-	}
-
-	@include respond(phone) {
-		grid-template-columns: 5rem 1fr 5rem;
-		grid-template-rows: 10% 1fr;
-	}
-}
-
-
-.projects__list {
-	
-	text-align:center;
-	opacity:0;
-	transition: all 1s;
-	height: 65%;
-
-	grid-column: 2 / span 1;
-	grid-row: 2 / span 1;
 	
 
-	display: grid;
-	grid-template-columns:  repeat(3, 1fr);
-	grid-template-rows: 1fr 40%;
-	grid-row-gap: 5rem;
-	align-items: start;
-	justify-items: center;
-
-	@include respond(phone) {
-		grid-template-columns: 1fr;
-		height: 80%;
-	}
-	
-	&.active {
-		opacity:1;	
+	&__title {
+		font-size: 1.8rem;
+		text-align: center;
 	}
 
-	& li.visible {
-		display: block;		
-	}
-
-	&__item {
-		display: none;
-		list-style:none;
-		width: 78%;
-		height: auto;
+	&__link,
+	&__link:visited {
+		text-decoration: none;
+		color: white;
+		font-size: 1.8rem;
+		display: block;
 		position: relative;
-		box-shadow: 0 .5rem 3rem rgba(#000, .3);
-		transition: all 1s;
+		margin-bottom: 1.5rem;
 
-		@include respond(phone) {
-			width: 100%;
+
+		&::before {
+            content: "";
+            height: 1px;
+            width: 5%;
+            opacity: 0;
+            position: absolute;
+            left: 47.5%;
+            top: 100%;
+            transition: all .4s;
+						overflow: hidden;
+						transform: scaleX(0.0001);
+            border-radius: 5px;
+                        
 		}
-
+		
+		
 		&:hover {
-			margin-top: -5rem;
-			transform: scale(1.3);
-			box-shadow: 0 2rem 5rem rgba(#000, .5);
-			z-index: 10;
-			transition: all 1s;
-
-			@include respond(tab-land) {
-				margin-top: -1rem;
-				transform: scale(1.05);
+			color: black;
+			
+			&::before {
+				background-color: #02e0d5;
+        transform: scaleX(1);
+        opacity: 1;             
 			}
-	
+			
 		}
+		
 	}
 
 	&__photo {
-		border: none;
-		width: 100%;
+		width: 45%;
 		height: auto;
 		display: block;
-		max-width:100%;
-		z-index: 1;
+		margin: 2rem auto;
+		transition: all 1s;
+		box-shadow: 5px 5px 17px 5px rgba(70, 71, 71, 0.582);
+
+		&:hover {
+			transform: scale(1.2) translateY(-20px);
+		}
+	
+	}
+
+	&__text {
+		font-size: 1.8rem;
+		background: transparent;
+		width: 90;
+		margin: 5rem auto 3rem auto;
+		text-align: left;
 	}
 }
 
-.arrow {
-	background:url('../img/arrows.png') no-repeat;
-	width: 2.8rem;
-	height: 2.8rem;
-	opacity: .7;
-	// text-indent: -10rem;
-	overflow: hidden;
-	cursor: pointer;
-	display: block;
-
-	@include respond(tab-land) {
-		width: 3.1rem;
-		height: 3.1rem;
-	}
-	
-
-	&:hover {
-		opacity:1;
-	}
-	
-	&.next {
-		background-position:top right;
-		position:absolute;
-		bottom:47%;
-		right: 5%;
-	
-	}
-
-	&.prev {
-		position:absolute;
-		bottom:47%;
-		left: 5%;
-		display:none;
-	}
-}
 
 // =========== HELPERS ============//
 

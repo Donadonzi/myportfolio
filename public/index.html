@@ -12,9 +12,9 @@
     
     
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-    <link rel="stylesheet" href="../src/css/style.css" />
-    <!-- <link rel="style sheet" href="../src/css/animate.css" /> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+		<link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+		<link rel="stylesheet" href="../src/css/style.css" />
 
     <title>DonZ Portfolio</title>
   </head>
@@ -65,124 +65,146 @@
         </div>
         
       </section>
-      
-      
-      
-  
-      <!-- THIS WAS THE FORMER PROJECT SECTION. I DON'T DELETE IT IN CASE I WANNA USE IT ELSE WHERE-->
-      <!-- <section class="projects">
-
-            <div class="project__card">
-              <div class="project__card__side project__card__side--front project__card--front-1 ">
-                Omnifood
-              </div>
-              <div class="project__card__side project__card__side--back project__card--back-1 ">
-                Project 1 Backside
-              </div>
-            </div>
-
-          </div>  
-      </section> -->
-
+<!--*************************************** PORTFOLIO ****************************************************-->
       <section class="portfolio" id="portfolio">
-        <h1 class="portfolio__header animated slow pulse infinite">Work Samples</h1>
-        <div id="main" class="projects__gallery">
+				<h1 class="portfolio__header animated slow pulse infinite">Work Samples</h1>
+				
+				<div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true, "autoPlay": 3500, "wrapAround": true }'>
 
-          <span class="projects__gallery__helper">&nbsp;</span>
+					<div class="project carousel-cell">
+						<h2 class="project__title">Task Manager API</h2>
+						<img class="project__photo" src="./img/sites/task-manager.jpg" alt="Task Manager" />
+						<p class="project__text">
+							A CRUD RESTful API built with Node.js, Express, MongoDB and Mongoose ODM that
+							provides user authentication with JSON Web Token and automated email using SendGrid.
+							Endpoints are tested using Jest and SuperTest. It is deployed using Heroku and MongoDB Atlas. 					
+						</p>
+					
+						<a href="https://donz-task-manager.herokuapp.com/" class="project__link">View</a>
+						<a href=" 	https://github.com/Donadonzi/task-manager-api" class="project__link">GitHub</a>
+					</div>
 
-          <a class="arrow prev"></a>
-          <a class="arrow next"></a>
-        
-          <ul id="carousel" class="projects__list">
-            
-            <li class="visible projects__list__item" data-num="project-1">
-              <h2 class="project__title">Omnifood</h2>
-              <a href="./OmniFood-D/" class="projects__list__link">
-                <img class="projects__list__photo" src="./img/sites/omnifood.jpg" alt="Omnifood" data-num="project-1" />
-              </a>  
-            </li>
+					<div class="project carousel-cell">
+						<h2 class="project__title">Chat App</h2>
+						<img class="project__photo" src="./img/sites/chat-app.jpg" alt="Chat App" />
+						<p class="project__text">
+							A real-time chat application built with Node.js and Express, that is implemented using
+							WebSocket protocol and Socket.io library. I Used mustache library to define html templates.
+						</p>
+						<a href="https://donz-chat-app.herokuapp.com/" class="project__link">View</a>
+						<a href=" 	https://github.com/Donadonzi/chat-app" class="project__link">GitHub</a>
+					</div>
 
-            <li class="visible projects__list__item" data-num="project-2">
-              <h2 class="project__title">Natours</h2>
-              <a href="./Natours-D/" class="projects__list__link">
-                <img class="projects__list__photo" src="./img/sites/natours.jpg" alt="Natours" data-num="project-2" />
-              </a>
-            </li>
+					<div class="project carousel-cell">
+						<h2 class="project__title">Weather App</h2>
+						<img class="project__photo" src="./img/sites/weather-app.jpg" alt="Weather App" />
+						<p class="project__text">
+							A Node/Express weather api, that fetches location and weather data from Mapbox and
+							weatherstack using <em>request</em> library. Template html files are created using Handlebars.js
+							module.
+						</p>
+						<a href="https://donz-weather-app.herokuapp.com/" class="project__link">View</a>
+						<a href="https://github.com/Donadonzi/node-weather-app" class="project__link">GitHub</a>
+					</div>
 
-            <li class="visible projects__list__item" data-num="project-3">
-              <h2 class="project__title">Trillo</h2>
-              <a href="./Trillo-D/" class="projects__list__link">
-                <img class="projects__list__photo" src="./img/sites/trillo.jpg" alt="Trillo" data-num="project-3" />
-              </a>
-            </li>
+					<div class="project carousel-cell">
+						<h2 class="project__title">Streamer App</h2>
+						<img class="project__photo" src="./img/sites/streamer.jpg" alt="Streamer App" />
+						<p class="project__text">
+							A single-page CRUD app for video streaming built with React, Redux, React Router, Redux Form and Semantic UI.
+							It provides user login system using Google API and OAuth, enabling users to create unlimited channels for streaming.
+							It uses Node-Media-Server as an RTMP server for receiving and broadcasting video streams, and
+							JSON Server to store/retrieve streams.
+						</p>
+					<a href="https://donz-streamer-app.herokuapp.com/" class="project__link">View</a>
+						<a href="https://github.com/Donadonzi/streamer" class="project__link">GitHub</a>
+					</div>
 
-            <li class="projects__list__item" data-num="project-4">
-              <h2 class="project__title">Nexter</h2>
-              <a href="./Nexter-D/" class="projects__list__link">
-                <img class="projects__list__photo" src="./img/sites/nexter.jpg" alt="Nexter" data-num="project-4" />
-              </a>
-            </li>
+					<div class="project carousel-cell">
+						<h2 class="project__title">Forkify App</h2>
+						<img class="project__photo" src="./img/sites/forkify.jpg" alt="Forkify App" />
+						<p class="project__text">
+							An application for searching food recipes built with HTML/CSS, JavaScript, webpack and Babel;
+							MVC architecture implemented with ES6 modules. Ability to load a selected recipe from the fetched results,
+							adjust servings, add the ingredients to shopping list and modify the quantities. It uses localStorage
+							property of Web Storage API to store/retrieve a list of liked recipes by anonymous user.
+						</p>
+					  <a href="./Forkify-D/" class="project__link">View</a>
+						<a href="https://github.com/Donadonzi/myportfolio/tree/master/public/Forkify-D" class="project__link">GitHub</a>
+					</div>
 
-            <li class="projects__list__item" data-num="project-5">
-              <h2 class="project__title">Budgety</h2>
-              <a href="./Budgety-D/" class="projects__list__link">
-                <img class="projects__list__photo" src="./img/sites/budgety.jpg" alt="Budgety" data-num="project-5" />
-              </a>
-            </li>
+					<div class="project carousel-cell">
+						<h2 class="project__title">Budgety App</h2>
+						<img class="project__photo" src="./img/sites/budgety.jpg" alt="Budgety App" />
+						<p class="project__text">
+							A web application for calculating income, expense and budget. I built it through my JavaScript
+							course. The focus here was mainly functionalities using JavaScript.
+						</p>
+						<a href="./Budgety-D/" class="project__link">View</a>
+						<a href="https://github.com/Donadonzi/myportfolio/tree/master/public/Budgety-D" class="project__link">GitHub</a>
+					</div>
 
-            <li class="projects__list__item" data-num="project-6">
-              <h2 class="project__title">Forkify</h2>
-              <a href="./Forkify-D/dist/" class="projects__list__link">
-                <img class="projects__list__photo" src="./img/sites/forkify.jpg" alt="Forkify" data-num="project-6" />
-              </a>
-            </li>
-        
-            <!-- <li class="projects__list__item" data-num="project-7">
-              <a href="#" class="projects__list__link">
-                PIG GAME<img class="projects__list__photo" src="./img/sites/forkify.jpg" alt="Forkify" data-num="project-7" />
-              </a>
-            </li> -->
+					<div class="project carousel-cell">
+						<h2 class="project__title">jQuery Collection</h2>
+						<img class="project__photo" src="./img/sites/under-construction.png" alt="jQuery Collection" />
+						<p class="project__text">
+							A collection of small projects built using jQuery, including some games.
+						</p>
+						<a href="https://donadonzi.github.io/" class="project__link">View</a>
+						<a href="https://github.com/Donadonzi/jQuery/tree/master/jQueryInAction" class="project__link">GitHub</a>
+					</div>
 
-            <p class="project__text visible" id="project-1">
-              This is a prototype website for a fictional food delivery company. I built it through my Responsive Webdesign
-              course using HTML5/CSS3. jQuery is used as well, to accomplish some of the visual effects.
-            </p>
+					<div class="project carousel-cell">
+						<h2 class="project__title">Nexter</h2>
+						<img class="project__photo" src="./img/sites/nexter.jpg" alt="Nexter" />
+						<p class="project__text">
+							A website for a fictional real estate company. I built it through my advanced CSS/SASS course.
+							In its layout, CSS Grid is widely used.
+						</p>
+						<a href="./Nexter-D/" class="project__link">View</a>
+						<a href="https://github.com/Donadonzi/myportfolio/tree/master/public/Nexter-D" class="project__link">GitHub</a>
+					</div>
 
-            <p class="project__text visible" id="project-2">
-              This is a prototype website for a fictional company that supposedly offers tours in nature.
-              I built it through my advanced CSS/SASS course along with learning a lot of new stuff. It's made by
-              only HTML and SCSS, using float layout. 
-            </p>
+					<div class="project carousel-cell">
+						<h2 class="project__title">Trillo</h2>
+						<img class="project__photo" src="./img/sites/trillo.jpg" alt="Trillo" />
+						<p class="project__text">
+							A prototype website for a fictional hotel. I built it through my advanced CSS/SASS course
+							learning all about Flexbox. Only SCSS (mostly Flexbox) and HTML were used in this website.
+						</p>
+						<a href="./Trillo-D/" class="project__link">View</a>
+						<a href="https://github.com/Donadonzi/myportfolio/tree/master/public/Trillo-D" class="project__link">GitHub</a>
+					</div>
 
-            <p class="project__text visible" id="project-3">
-              A prototype website for a fictional hotel. I built it through my advanced CSS/SASS course learning
-              all about Flexbox. Only SCSS (mostly Flexbox) and HTML were used in this website.
-            </p>
+					<div class="project carousel-cell">
+						<h2 class="project__title">Natours</h2>
+						<img class="project__photo" src="./img/sites/natours.jpg" alt="Natours" />
+						<p class="project__text">
+							A prototype website for a fictional company that supposedly offers tours in nature.
+							I built it through my advanced CSS/SASS course along with learning a lot of new stuff. It's made by
+							only HTML and SCSS, using float layout.
+						</p>
+						<a href="./Natours-D/" class="project__link">View</a>
+						<a href="https://github.com/Donadonzi/myportfolio/tree/master/public/Natours-D" class="project__link">GitHub</a>
+					</div>
+				
 
-            <p class="project__text" id="project-4">
-              A website for a fictional real estate company. I built it through my advanced CSS/SASS course. 
-              In its layout, CSS Grid is widely used.  
-            </p>
+					<div class="project carousel-cell">
+						<h2 class="project__title">Omnifood</h2>
+						<img class="project__photo" src="./img/sites/omnifood.jpg" alt="Omnifood" />	
+						<p class="project__text" id="project-1">
+							A prototype website for a fictional food delivery company. I built it through my Responsive Webdesign
+							course using HTML5/CSS3. jQuery is used as well, to accomplish some of the visual effects.
+						</p>
+						<a href="./OmniFood-D/" class="project__link">View</a>
+						<a href="https://github.com/Donadonzi/myportfolio/tree/master/public/OmniFood-D" class="project__link">GitHub</a>
+					</div>
 
-            <p class="project__text" id="project-5">
-              This is a web application for calculating income, expense and budget. I built it through my JavaScript
-              course. The focus here was mainly functionalities using JavaScript.
-            </p>
-
-            <p class="project__text" id="project-6">
-              A searching web application. Fetches recipes from an API. Results list and the selected recipe 
-              show on the main page, and users can add the ingredients to their shopping list and modify quantities.
-              I built it through my JS course and I learnt a lot about APIs, AJAX and MVC.
-            </p>
-
-            <!-- <p class="project__text" id="project-7">
-              This is a simple game, made by using Vanilla JavaScript.
-            </p> -->
-        
-          </ul>
-        </div> 
+									
+				</div>
+				
       </section>
-
+<!--*************************************** ABOUT ****************************************************-->
       <section class="section-about" id="about">
         <div class="about">
 
@@ -220,7 +242,7 @@
         </div>
       </section>
   
-      
+<!--*************************************** FOOTER ****************************************************-->
       <footer class="footer" id="footer">
         <div class="footer__text">     
           <p>
@@ -277,8 +299,9 @@
     </div> <!--overall-->
     
     <script src="../src/index.js"></script>
-    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script> -->
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+		<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
   </body>
 

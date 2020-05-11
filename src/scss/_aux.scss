@@ -59,7 +59,7 @@
 
 
     @include respond(tab-port) {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     @include respond(phone) {
@@ -71,7 +71,7 @@
     
         &__text {
         display: flex;
-        width: 30%;
+        // width: 30%;
         flex-direction: column;
         justify-content: center;
         align-items: center;
