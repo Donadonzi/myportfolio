@@ -2,6 +2,10 @@
 	height: 100%;
 	// width: 50%;
 	padding-top: 4rem;
+
+	// @media screen and (max-width: 768px) {
+	// 	height: auto;
+	// }
 	
 }
 
@@ -34,4 +38,26 @@
 }
 .flickity-prev-next-button.next {
   right: -40px;
+}
+
+
+/* position dots in carousel */
+.flickity-page-dots {
+  bottom: 0px;
+}
+/* white circles */
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+	border: 1px solid rgb(161, 160, 160);
+	
+	@include respond(phone) {
+		display: none;
+	}
+}
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: rgb(161, 160, 160);
 }

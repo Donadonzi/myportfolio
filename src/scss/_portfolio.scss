@@ -8,11 +8,13 @@
 	transition: all 1s;
 	position: relative;
 	padding: 10rem 15rem 5rem 15rem;
-	
+		
 
-	// @include respond(phone) {
-	// 	// height: 50vh;
-	// }
+	@include respond(phone) {
+		padding: 80px 10px 50px 10px;
+		height: 800px;
+		font-size: 1.2rem;
+	}
 
 	&__header {
 		display: block;
@@ -34,6 +36,12 @@
 		text-align: center;
 	}
 
+	&__link {
+		width: 10%;
+		margin: 0 auto;
+		
+	}
+
 	&__link,
 	&__link:visited {
 		text-decoration: none;
@@ -45,17 +53,17 @@
 
 
 		&::before {
-            content: "";
-            height: 1px;
-            width: 5%;
-            opacity: 0;
-            position: absolute;
-            left: 47.5%;
-            top: 100%;
-            transition: all .4s;
-						overflow: hidden;
-						transform: scaleX(0.0001);
-            border-radius: 5px;
+      content: "";
+      height: 1px;
+      width: 100%;
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      top: 100%;
+      transition: all .4s;
+			overflow: hidden;
+			transform: scaleX(0.0001);
+      border-radius: 5px;
                         
 		}
 		
@@ -90,7 +98,7 @@
 	&__text {
 		font-size: 1.8rem;
 		background: transparent;
-		width: 90;
+		width: 90%;
 		margin: 5rem auto 3rem auto;
 		text-align: left;
 	}

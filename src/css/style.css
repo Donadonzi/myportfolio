@@ -445,6 +445,11 @@
   transition: all 1s;
   position: relative;
   padding: 10rem 15rem 5rem 15rem; }
+  @media only screen and (max-width: 37.5em) {
+    .portfolio {
+      padding: 80px 10px 50px 10px;
+      height: 800px;
+      font-size: 1.2rem; } }
   .portfolio__header {
     display: block;
     position: absolute;
@@ -458,6 +463,9 @@
   .project__title {
     font-size: 1.8rem;
     text-align: center; }
+  .project__link {
+    width: 10%;
+    margin: 0 auto; }
   .project__link, .project__link:visited {
     text-decoration: none;
     color: white;
@@ -468,10 +476,10 @@
     .project__link::before, .project__link:visited::before {
       content: "";
       height: 1px;
-      width: 5%;
+      width: 100%;
       opacity: 0;
       position: absolute;
-      left: 47.5%;
+      left: 0;
       top: 100%;
       transition: all .4s;
       overflow: hidden;
@@ -495,7 +503,7 @@
   .project__text {
     font-size: 1.8rem;
     background: transparent;
-    width: 90;
+    width: 90%;
     margin: 5rem auto 3rem auto;
     text-align: left; }
 
@@ -649,6 +657,25 @@
 
 .flickity-prev-next-button.next {
   right: -40px; }
+
+/* position dots in carousel */
+.flickity-page-dots {
+  bottom: 0px; }
+
+/* white circles */
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 1px solid #a1a0a0; }
+  @media only screen and (max-width: 37.5em) {
+    .flickity-page-dots .dot {
+      display: none; } }
+
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: #a1a0a0; }
 
 *,
 *::after,
