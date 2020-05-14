@@ -8,11 +8,12 @@
 	transition: all 1s;
 	position: relative;
 	padding: 10rem 15rem 5rem 15rem;
+	height: 900px;
 		
 
 	@include respond(phone) {
 		padding: 80px 10px 50px 10px;
-		height: 800px;
+		height: 750px;
 		font-size: 1.2rem;
 	}
 
