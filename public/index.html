@@ -33,7 +33,7 @@
         <div class="header">
           <a href="#about" class="header__link">About Me</a>
           <a href="#portfolio" class="header__link">Portfolio</a>
-          <a href="#footer" class="header__link header__link__contact">Contact Me</a>
+          <a href="#contact" class="header__link header__link__contact">Contact</a>
         </div>
         <div class="header__menu-lang">
           &nbsp;
@@ -265,6 +265,26 @@
       </section>
   
 <!--*************************************** FOOTER ****************************************************-->
+<div class="contact" id="contact">
+				<p>Care to drop me a line here?</p>
+			<form class="contact__form" action="https://formspree.io/mzbjoyzw"  method="POST">
+				<div class="contact__form-label">
+					<label>
+						Your email:
+						<input type="text" name="_replyto">
+					</label>
+				</div>
+					
+				<div class="contact__form-label">
+					<label>
+						Your message:
+						<textarea name="message"></textarea>
+					</label>
+				</div>
+
+					<button class="contact__form-button" type="submit">Send</button>
+				</form>
+				</div>
       <footer class="footer" id="footer">
         <div class="footer__text">     
           <p>
@@ -315,9 +335,13 @@
               <p class="gmail__text">donya.teymourifar@gmail.com</p>
             </a> 
           </address>
-        </div>
-        
-      </footer>
+				</div>
+				
+				        
+			</footer>
+
+			
+
     </div> <!--overall-->
     
     <script src="../src/index.js"></script>

@@ -616,6 +616,55 @@
 .mailto__link:active {
   color: white; }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  background-color: rgba(238, 238, 238, 0.1);
+  margin-bottom: 3rem;
+  height: auto;
+  padding: 3rem 5rem;
+  border-radius: 7px;
+  min-height: 200px; }
+  .contact p {
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: 1.5rem; }
+  .contact__form {
+    margin: 0 auto; }
+    .contact__form-label {
+      margin-bottom: 2rem; }
+    .contact__form-label input {
+      width: 100%;
+      height: 3rem;
+      margin: 1rem auto; }
+      .contact__form-label input:focus {
+        outline: 1px solid #02e0d5; }
+    .contact__form-label textarea {
+      width: 100%;
+      min-height: 20rem;
+      resize: none;
+      margin: 1rem auto;
+      overflow-y: scroll; }
+      .contact__form-label textarea:focus {
+        outline: 1px solid #02e0d5; }
+      .contact__form-label textarea::-webkit-scrollbar {
+        width: 5px; }
+      .contact__form-label textarea::-webkit-scrollbar-thumb {
+        border-radius: 3px;
+        border: 3px solid #02e0d5; }
+    .contact__form-button {
+      width: 8rem;
+      height: 4rem;
+      padding: 5px;
+      border-radius: 5px;
+      background-color: teal;
+      border: transparent;
+      margin: 0 35% 1rem 35%; }
+      .contact__form-button:hover {
+        cursor: pointer;
+        background-color: #02e0d5; }
+
 /*
 0 - 600 px:     Phone
 600 - 900 px:   Tablet portrait
@@ -692,7 +741,7 @@ html {
   display: flex;
   justify-content: center;
   background-color: #0a131b;
-  color: white;
+  color: white !important;
   /* ============== NEEDS MORE WORK =================
     @include respond(tab-port) {
         font-size: 50%;
@@ -712,7 +761,8 @@ body {
   font-size: 1.8rem;
   width: 100vw;
   padding: 5rem;
-  margin: 5rem 5vw 5rem 5vw; }
+  margin: 5rem 5vw 5rem 5vw;
+  background-color: transparent !important; }
   @media only screen and (max-width: 75em) {
     body {
       font-size: 56.25%; } }
