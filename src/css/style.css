@@ -576,7 +576,8 @@
         margin-bottom: 1rem; } }
   .footer__icon {
     height: 2.5rem;
-    width: 2.5rem; }
+		width: 2.5rem;
+	fill: white ; }
     @media only screen and (max-width: 37.5em) {
       .footer__icon {
         height: 1.7rem;
