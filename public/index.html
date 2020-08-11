@@ -23,7 +23,7 @@
 
     <div class="overall__bg__video">
       <video type="video/mov" autoplay muted loop>
-        <source src="img/DiscoLightsVidevo.mov">
+        <source src="img/DiscoLightsVideo.mov">
           Sorry, your browser doesn't support embedded videos!
         </video>
     </div>  
@@ -34,6 +34,17 @@
           <a href="#about" class="header__link">About Me</a>
           <a href="#portfolio" class="header__link">Portfolio</a>
           <a href="#contact" class="header__link header__link__contact">Contact</a>
+
+			<!-- Weather -->
+			<button id="weather-btn">Get my weather</button>
+			<div id="weather-modal" class="modal">
+		    	<div class="modal-content">
+					<span class="close">&times;</span>
+<!--					<p>Some text in the Modal..</p>-->
+					<div id="weather"></div>
+				</div>
+			</div>
+
         </div>
         <div class="header__menu-lang">
           &nbsp;
@@ -42,6 +53,7 @@
       </section>
 
 	<!--*************************************** ABOUT ****************************************************-->
+		<div id="weather-div"></div>
       <section class="section-about" id="about">
         <div class="about">
 
