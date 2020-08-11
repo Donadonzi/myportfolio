@@ -45,7 +45,7 @@
     align-items: center;
     font-size: 2rem;
     height: 50vh;
-    width: 50vw;
+    //width: 50vw;
     border-radius: 7px;
     overflow: hidden;
     
@@ -125,8 +125,8 @@
     }
 
     &__content {
-        
-         height: 100%;
+        display: block;
+         height: 50vh;
          width: 100%;
          object-fit: cover;
   

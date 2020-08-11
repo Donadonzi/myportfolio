@@ -6,7 +6,7 @@
 @import "footer";
 @import "mixins";
 @import "carousel";
-@import "_modal.scss";
+@import "modal";
 
 *,
 *::after,
@@ -50,7 +50,6 @@ body {
     padding: 5rem;
 		margin:5rem 5vw 5rem 5vw;
 		background-color: transparent !important;
-    
 
     @include respond(tab-land) { 
         font-size: 56.25%; 
@@ -65,9 +64,7 @@ body {
     
     @include respond(phone) { 
         font-size: 43%;
-       
-    }    
-   
+    }
 }
 
 .overall__bg__video {
@@ -93,7 +90,6 @@ body {
         width: 100vw;
         height: 100vh;
     }
-    
 }
 
 .overall {
@@ -104,7 +100,6 @@ body {
     justify-content: center;
     width: 90vw;
     z-index: 10;
-    
 }
 
 .spinner {
@@ -125,8 +120,6 @@ body {
     }
 }
 
-
- 
 @mixin respond($breakpoint) {
     @if $breakpoint == phone {
         @media only screen and (max-width: 37.5em) { @content }; // 600px
