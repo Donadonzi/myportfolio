@@ -10,7 +10,7 @@
 	// }
 
 	@include respond(phone) {
-		height: 100vh;
+		height: 100%;
 	}
 	
 }
@@ -18,7 +18,8 @@
 .carousel-cell {
   width: 100%; /* full width */
   height: 100%; /* height of carousel */
-  margin-right: 10px;
+	margin-right: 10px;
+	
 }
 
 /* smaller, dark, rounded square */
