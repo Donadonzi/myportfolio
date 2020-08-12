@@ -5,9 +5,9 @@
 	// width: 50%;
 	padding-top: 4rem;
 
-	// @media screen and (max-width: 768px) {
-	// 	height: auto;
-	// }
+	@include responde(phone) {
+		height: auto;
+	}
 	
 }
 

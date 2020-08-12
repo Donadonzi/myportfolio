@@ -714,6 +714,9 @@
 .main-carousel {
   height: 100%;
   padding-top: 4rem; }
+  @media screen and (max-width: 768px) {
+    .main-carousel {
+      height: auto; } }
 
 .carousel-cell {
   width: 100%;
