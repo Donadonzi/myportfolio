@@ -714,9 +714,9 @@
 .main-carousel {
   height: 100%;
   padding-top: 4rem; }
-  @media screen and (max-width: 768px) {
+  @media only screen and (max-width: 37.5em) {
     .main-carousel {
-      height: auto; } }
+      height: 100vh; } }
 
 .carousel-cell {
   width: 100%;

@@ -5,8 +5,12 @@
 	// width: 50%;
 	padding-top: 4rem;
 
-	@include responde(phone) {
-		height: auto;
+	// @media screen and (max-width: 768px) {
+	// 	height: auto;
+	// }
+
+	@include respond(phone) {
+		height: 100vh;
 	}
 	
 }
