@@ -1,3 +1,5 @@
+@import "mixins";
+
 .footer {
     font-size: 1.2rem;
     // color: #202020;
@@ -12,12 +14,13 @@
     align-items: center;
 
     @include respond(phone) {
-        height: 20vh;
+        height: 25vh;
         display: grid;
         grid-template-columns: 1fr 1fr;
         // grid-template-rows: 100%;
         justify-items: center;
         align-items: center;
+		font-size: 1rem;
     }
 
     &__links {
@@ -84,7 +87,6 @@
 .mailto__link:link,
 .mailto__link:visited,
 .mailto__link:active {
-    // color: #202020;
     color: white;
 }
 

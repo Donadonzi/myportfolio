@@ -568,6 +568,14 @@
 .project-7 {
   background-image: linear-gradient(#f7dfa5, #8a0900) !important; }
 
+/*
+0 - 600 px:     Phone
+600 - 900 px:   Tablet portrait
+900 - 1200 px:  Tablet landscape
+[1200 - 1800 px] is where our normal styles apply
+1800+ px:       Big screens
+  1em = 16px
+*/
 .footer {
   font-size: 1.2rem;
   background-color: rgba(238, 238, 238, 0.1);
@@ -581,11 +589,12 @@
   align-items: center; }
   @media only screen and (max-width: 37.5em) {
     .footer {
-      height: 20vh;
+      height: 25vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
       justify-items: center;
-      align-items: center; } }
+      align-items: center;
+      font-size: 1rem; } }
   .footer__links {
     display: block; }
     @media only screen and (max-width: 37.5em) {
