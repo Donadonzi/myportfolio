@@ -1,6 +1,5 @@
 @import "about";
 @import "header";
-@import "projects";
 @import "aux";
 @import "portfolio";
 @import "footer";
@@ -118,6 +117,7 @@ body {
         margin-top: 3rem;
     }
 }
+
 
 @mixin respond($breakpoint) {
     @if $breakpoint == phone {

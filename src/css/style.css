@@ -8,7 +8,6 @@
 */
 .section-about {
   background-color: rgba(237, 237, 237, 0.1);
-  min-height: 100vh;
   width: 100%;
   margin-bottom: 5rem;
   border-radius: 7px;
@@ -17,6 +16,9 @@
   @media only screen and (max-width: 56.25em) {
     .section-about {
       padding: 4rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .section-about {
+      height: 1000px; } }
 
 .about {
   margin: auto;
@@ -28,9 +30,6 @@
   grid-gap: 2rem;
   justify-items: center;
   align-items: center; }
-  @media only screen and (max-width: 56.25em) {
-    .about {
-      grid-row-gap: 8rem; } }
   @media only screen and (max-width: 37.5em) {
     .about {
       display: flex;
@@ -54,23 +53,18 @@
     .about__text.p-2 {
       grid-column: 2 / span 1;
       grid-row: 2 / span 1; }
-      @media only screen and (max-width: 75em) {
-        .about__text.p-2 {
-          margin-top: -7rem; } }
-      @media only screen and (max-width: 37.5em) {
-        .about__text.p-2 {
-          margin-top: 2rem; } }
 
 .card-2 {
   grid-row: 2 / span 1;
   grid-column: 1 / span 1; }
 
 .project__card {
-  height: 50vh;
-  width: 75vw;
+  height: 35vh;
+  width: 40vw;
   perspective: 100rem;
   position: relative;
-  align-self: center; }
+  align-self: center;
+  margin-bottom: 4rem; }
   @media only screen and (max-width: 37.5em) {
     .project__card {
       width: 90%;
@@ -109,7 +103,7 @@
     background-position: center; }
     @media only screen and (max-width: 75em) {
       .project__card--front-1 {
-        margin-top: 7rem; } }
+        margin-bottom: 2rem; } }
     @media only screen and (max-width: 37.5em) {
       .project__card--front-1 {
         margin-top: 2rem; } }
@@ -133,6 +127,11 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center; }
+
+@media only screen and (max-width: 56.25em) {
+  .card-2 {
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1; } }
 
 /*
 0 - 600 px:     Phone
@@ -654,6 +653,9 @@
   padding: 3rem 5rem;
   border-radius: 7px;
   min-height: 200px; }
+  @media only screen and (max-width: 37.5em) {
+    .contact {
+      width: 100%; } }
   .contact p {
     font-weight: bold;
     font-size: 17px;
@@ -693,6 +695,14 @@
         cursor: pointer;
         background-color: #02e0d5; }
 
+/*
+0 - 600 px:     Phone
+600 - 900 px:   Tablet portrait
+900 - 1200 px:  Tablet landscape
+[1200 - 1800 px] is where our normal styles apply
+1800+ px:       Big screens
+  1em = 16px
+*/
 /*
 0 - 600 px:     Phone
 600 - 900 px:   Tablet portrait
@@ -748,7 +758,8 @@
   border: 1px solid #a1a0a0; }
   @media only screen and (max-width: 37.5em) {
     .flickity-page-dots .dot {
-      display: none; } }
+      width: 7px;
+      height: 7px; } }
 
 /* fill-in selected dot */
 .flickity-page-dots .dot.is-selected {
