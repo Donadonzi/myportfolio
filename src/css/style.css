@@ -499,14 +499,20 @@
       top: 100%;
       transition: all .4s;
       overflow: hidden;
-      transform: scaleX(0.0001);
-      border-radius: 5px; }
+      transform: scaleX(0.0001); }
     .project__link:hover, .project__link:visited:hover {
-      color: black; }
+      color: #02e0d5; }
       .project__link:hover::before, .project__link:visited:hover::before {
         background-color: #02e0d5;
         transform: scaleX(1);
+        transform-origin: center;
         opacity: 1; }
+        @media only screen and (max-width: 56.25em) {
+          .project__link:hover::before, .project__link:visited:hover::before {
+            transform: scaleX(1.5); } }
+        @media only screen and (max-width: 37.5em) {
+          .project__link:hover::before, .project__link:visited:hover::before {
+            left: 20%; } }
   .project__photo {
     width: 45%;
     height: auto;

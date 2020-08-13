@@ -12,7 +12,6 @@
 
 	@include respond(phone) {
 		padding: 80px 10px 50px 10px;
-		// height: 750px;
 		font-size: 1.2rem;
 	}
 
@@ -63,18 +62,27 @@
       transition: all .4s;
 			overflow: hidden;
 			transform: scaleX(0.0001);
-      border-radius: 5px;
+			
                         
 		}
 		
 		
 		&:hover {
-			color: black;
+			color: #02e0d5;
 			
 			&::before {
 				background-color: #02e0d5;
-        transform: scaleX(1);
-        opacity: 1;             
+				transform: scaleX(1);
+				transform-origin: center;
+				opacity: 1; 
+				
+				@include respond(tab-port) {
+					transform: scaleX(1.5);	
+				}
+
+				@include respond(phone) {
+					left: 20%;	
+				}
 			}
 			
 		}
