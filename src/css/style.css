@@ -700,6 +700,13 @@
         cursor: pointer;
         background-color: #02e0d5; }
 
+.freepik-attribute {
+  display: none; }
+  @media only screen and (max-width: 56.25em) {
+    .freepik-attribute {
+      display: block;
+      margin-top: 2rem; } }
+
 /*
 0 - 600 px:     Phone
 600 - 900 px:   Tablet portrait
@@ -823,15 +830,7 @@ html {
   display: flex;
   justify-content: center;
   background-color: #0a131b;
-  color: white !important;
-  /* ============== NEEDS MORE WORK =================
-    @include respond(tab-port) {
-        font-size: 50%;
-        background-image: url(../../src/img/pexels-bg.jpeg);
-        backdrop-filter: brightness(.7);
-        // position: fixed; 
-    }
-==================*/ }
+  color: white !important; }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
@@ -877,6 +876,20 @@ body {
     object-fit: fill;
     width: 100vw;
     height: 100vh; }
+
+.overall__mobile-bg {
+  display: none; }
+  @media only screen and (max-width: 56.25em) {
+    .overall__mobile-bg {
+      display: block;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      filter: brightness(0.25);
+      z-index: -1; }
+      .overall__mobile-bg img {
+        width: 100%;
+        height: auto; } }
 
 .overall {
   display: flex;

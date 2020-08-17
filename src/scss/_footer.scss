@@ -16,7 +16,6 @@
       height: 25vh;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      // grid-template-rows: 100%;
       justify-items: center;
       align-items: center;
 			font-size: 1rem;
@@ -162,6 +161,15 @@
 			}
 		}
 	}
+}
+
+.freepik-attribute {
+	display: none;
+
+	@include respond(tab-port) {
+		display: block;
+		margin-top: 2rem;
+  }
 }
 		
 

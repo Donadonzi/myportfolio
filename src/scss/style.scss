@@ -25,15 +25,7 @@ html {
     background-color: #0a131b;
     color: white !important;
        
-/* ============== NEEDS MORE WORK =================
-    @include respond(tab-port) {
-        font-size: 50%;
-        background-image: url(../../src/img/pexels-bg.jpeg);
-        backdrop-filter: brightness(.7);
-        // position: fixed; 
-    }
-==================*/
-    
+  
     @include respond(tab-land) { 
         font-size: 56.25%; 
     } 
@@ -89,6 +81,25 @@ body {
         width: 100vw;
         height: 100vh;
     }
+}
+
+.overall__mobile-bg {
+	display: none;
+
+	@include respond(tab-port) {
+		display: block;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		filter: brightness(.25);
+		z-index: -1;
+
+		& img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
 }
 
 .overall {
