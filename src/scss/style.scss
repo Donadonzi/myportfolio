@@ -54,7 +54,8 @@ body {
     }
     
     @include respond(phone) { 
-        font-size: 43%;
+				font-size: 43%;
+				margin: 0;
     }
 }
 
@@ -95,7 +96,7 @@ body {
 		z-index: -1;
 
 		& img {
-			width: 100%;
+			// width: 100%;
 			height: auto;
 		}
 	}

@@ -854,7 +854,8 @@ body {
       margin: 3rem 4vw 3rem 4vw; } }
   @media only screen and (max-width: 37.5em) {
     body {
-      font-size: 43%; } }
+      font-size: 43%;
+      margin: 0; } }
 
 .overall__bg__video {
   display: flex;
@@ -888,7 +889,6 @@ body {
       filter: brightness(0.25);
       z-index: -1; }
       .overall__mobile-bg img {
-        width: 100%;
         height: auto; } }
 
 .overall {
