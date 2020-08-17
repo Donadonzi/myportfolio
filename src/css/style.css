@@ -625,7 +625,7 @@
   @media only screen and (max-width: 37.5em) {
     .footer__text {
       grid-column: 1 / span 1;
-      grid-row: 2; } }
+      grid-row: 2 / span 2; } }
 
 .tools__icon {
   height: 1.7rem;
@@ -636,17 +636,14 @@
       width: 1.4rem;
       margin-top: .5rem; } }
 
-.mailto__link {
+.footer__link__text {
   text-decoration: none;
   font-style: normal;
   display: flex;
   flex-direction: column;
   align-items: center; }
-
-.mailto__link:link,
-.mailto__link:visited,
-.mailto__link:active {
-  color: white; }
+  .footer__link__text:link, .footer__link__text:visited, .footer__link__text:active {
+    color: white; }
 
 .contact {
   display: flex;
