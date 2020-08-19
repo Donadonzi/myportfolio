@@ -847,12 +847,12 @@ body {
   @media only screen and (max-width: 56.25em) {
     body {
       font-size: 50%;
-      padding: 2rem;
-      margin: 3rem 4vw 3rem 4vw; } }
+      padding: 1rem;
+      margin: 2rem;
+      min-width: 100vw; } }
   @media only screen and (max-width: 37.5em) {
     body {
-      font-size: 43%;
-      margin: 0; } }
+      font-size: 43%; } }
 
 .overall__bg__video {
   display: flex;
@@ -886,7 +886,7 @@ body {
       filter: brightness(0.25);
       z-index: -1; }
       .overall__mobile-bg img {
-        height: auto; } }
+        height: 100%; } }
 
 .overall {
   display: flex;
